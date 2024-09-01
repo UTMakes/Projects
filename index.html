@@ -3,44 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Page</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
-        }
-        h1 {
-            margin: 0;
-            font-size: 2em;
-        }
-        p {
-            margin: 20px 0;
-        }
-        a {
-            color: #333;
-            text-decoration: none;
-            border-bottom: 2px solid #333;
-            padding: 4px;
-        }
-        a:hover {
-            background-color: #333;
-            color: white;
-        }
-    </style>
+    <title>NexusQ Studios</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Welcome to My GitHub Page</h1>
+        <div class="container">
+            <h1>NexusQ Studios</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <p>This is a simple website hosted on GitHub Pages.</p>
-    <p>Feel free to <a href="https://github.com" target="_blank">visit my GitHub profile</a>.</p>
+
+    <section id="home">
+        <div class="container">
+            <h2>Welcome to NexusQ Studios</h2>
+            <p>We are a creative studio offering innovative solutions for your digital needs.</p>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>NexusQ Studios is a team of passionate designers, developers, and marketers dedicated to bringing your ideas to life. We specialize in web development, graphic design, and digital marketing.</p>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-list">
+                <div class="service-item">
+                    <h3>Web Development</h3>
+                    <p>Custom websites built with the latest technologies.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Graphic Design</h3>
+                    <p>Creative designs that capture your brand's essence.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Digital Marketing</h3>
+                    <p>Strategies to boost your online presence and reach your target audience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Get in touch with us to discuss your next project.</p>
+            <a href="mailto:info@nexusqstudios.com" class="btn">Email Us</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 NexusQ Studios. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
