@@ -12,6 +12,38 @@ body {
     color: #333;
 }
 
+.hidden {
+    display: none;
+}
+
+/* Settings Button */
+#settings-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#settings-menu {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+#theme-toggle {
+    margin-left: 10px;
+}
+
 /* Container */
 .container {
     width: 90%;
@@ -25,6 +57,7 @@ header {
     background-color: #333;
     color: white;
     padding: 20px 0;
+    position: relative;
 }
 
 header h1 {
