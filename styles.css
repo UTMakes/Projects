@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth; /* Smooth scrolling for the entire document */
+}
+
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
