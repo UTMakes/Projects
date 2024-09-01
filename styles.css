@@ -17,6 +17,8 @@ body {
     --primary-color: #333;
     --secondary-color: #fff;
     --accent-color: #007bff; /* Nice blue color */
+    --nav-background: rgba(0, 0, 0, 0.1); /* Slightly transparent background for nav */
+    --nav-hover-background: rgba(0, 0, 0, 0.2); /* Darker on hover */
 }
 
 /* Container */
@@ -31,17 +33,18 @@ body {
 header {
     background-color: var(--accent-color); /* Blue background */
     color: var(--secondary-color); /* White text */
-    padding: 10px 0; /* Reduced padding */
+    padding: 20px;
     margin-top: 20px; /* Space the header from the top */
     border-radius: 10px; /* Add slight roundness */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
     position: relative;
 }
 
 header h1 {
     text-align: center;
     margin: 0;
-    padding: 20px 0; /* Adjust padding for centering */
-    font-size: 2em;
+    padding: 40px 0 20px 0; /* Increase top padding */
+    font-size: 2.5em; /* Increase font size for better emphasis */
     color: var(--secondary-color); /* White text */
 }
 
@@ -49,30 +52,31 @@ header nav ul {
     display: flex;
     justify-content: center;
     list-style: none;
-    flex-wrap: wrap;
     position: absolute;
-    top: 0; /* Align to the top of the header */
+    top: 10px; /* Slight space from the top */
     left: 50%;
     transform: translateX(-50%);
-    padding: 10px 0; /* Adjust padding as needed */
+    background-color: var(--nav-background); /* Slightly transparent background */
+    padding: 10px 20px;
+    border-radius: 20px; /* Rounder edges for a modern look */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for the nav */
 }
 
 header nav ul li {
-    margin: 5px;
+    margin: 0 10px;
 }
 
 header nav ul li a {
     color: var(--secondary-color); /* White text */
     text-decoration: none;
-    padding: 5px 10px;
-    border: 2px solid var(--secondary-color); /* White border */
-    border-radius: 5px;
+    padding: 10px 15px; /* Increase padding for better touch target */
+    border-radius: 10px; /* Round edges for buttons */
     transition: background-color 0.3s, color 0.3s;
 }
 
 header nav ul li a:hover {
-    background-color: var(--secondary-color); /* White background on hover */
-    color: var(--accent-color); /* Blue text on hover */
+    background-color: var(--nav-hover-background); /* Darker background on hover */
+    color: var(--secondary-color); /* Keep text white on hover */
 }
 
 /* Sections */
@@ -91,6 +95,10 @@ section p {
     text-align: center;
     margin-bottom: 20px;
     font-size: 1.2em;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #555;
 }
 
 .services-list {
@@ -104,32 +112,33 @@ section p {
     padding: 20px;
     margin: 10px;
     width: 30%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Slightly deeper shadow */
     border-radius: 10px; /* Add slight roundness */
     text-align: center;
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
 }
 
 .service-item:hover {
     transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Enhance shadow on hover */
     border: 2px solid var(--accent-color); /* Blue border on hover */
 }
 
 .service-item h3 {
-    font-size: 1.5em;
+    font-size: 1.8em; /* Slightly larger */
     margin-bottom: 10px;
     color: var(--accent-color); /* Blue text */
 }
 
 .service-item p {
-    font-size: 1em;
+    font-size: 1.1em;
     color: #666;
 }
 
 /* Contact Section */
 #contact .btn {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 15px 30px; /* Increase padding for prominence */
     color: var(--secondary-color);
     background-color: var(--accent-color); /* Blue background */
     text-decoration: none;
@@ -139,7 +148,7 @@ section p {
 
 #contact .btn:hover {
     background-color: #0056b3; /* Darker blue on hover */
-    transform: scale(1.1);
+    transform: scale(1.05); /* Slight scale on hover */
 }
 
 /* Footer Styles */
@@ -147,19 +156,20 @@ footer {
     background-color: var(--primary-color);
     color: var(--secondary-color);
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0;
     border-radius: 10px; /* Add slight roundness */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for footer */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 1.5em;
-        padding: 15px 0;
+        font-size: 2em;
+        padding: 30px 0 15px 0;
     }
 
     header nav ul {
-        top: 10px; /* Adjust top alignment for smaller screens */
+        top: 5px; /* Adjust top alignment for smaller screens */
     }
 
     .services-list {
