@@ -68,5 +68,20 @@
             <p>&copy; 2024 NexusQ Studios. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- JavaScript for Smooth Scrolling -->
+    <script>
+        // Select all links with hashes
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                // Scroll to the element with the ID matching the href attribute of the anchor
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'  // Smooth scrolling
+                });
+            });
+        });
+    </script>
 </body>
 </html>
