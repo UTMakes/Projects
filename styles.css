@@ -139,6 +139,58 @@ section p {
     color: #666;
 }
 
+/* Minecraft Section */
+#minecraft {
+    background-color: #2e8b57; /* A greenish color reminiscent of Minecraft's grassy theme */
+    background-image: url('path-to-minecraft-background.jpg'); /* Add your Minecraft-related background image */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#minecraft h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #fff; /* White text for contrast */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle text shadow for better readability */
+}
+
+#minecraft p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #f0f0f0; /* Slightly off-white for better readability */
+}
+
+/* Roblox Section */
+#roblox {
+    background-color: #ff4757; /* A bright red color reminiscent of the Roblox theme */
+    background-image: url('path-to-roblox-background.jpg'); /* Add your Roblox-related background image */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#roblox h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #fff; /* White text for contrast */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle text shadow for better readability */
+}
+
+#roblox p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #f0f0f0; /* Slightly off-white for better readability */
+}
+
 /* Contact Section */
 #contact .btn {
     display: inline-block;
@@ -184,6 +236,10 @@ footer {
     .service-item {
         width: 80%;
         margin-bottom: 20px;
+    }
+
+    #minecraft, #roblox {
+        padding: 60px 0;
     }
 }
 
