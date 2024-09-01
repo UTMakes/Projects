@@ -39,6 +39,8 @@ header {
     color: var(--secondary-color); /* White text */
     padding: 20px;
     margin-top: 20px; /* Space the header from the top */
+    margin-left: 20px; /* Add space on the left */
+    margin-right: 20px; /* Add space on the right */
     border-radius: 10px; /* Add slight roundness */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
     position: relative;
