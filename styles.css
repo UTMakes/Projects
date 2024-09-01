@@ -32,6 +32,8 @@ header {
     background-color: var(--primary-color);
     color: var(--secondary-color);
     padding: 20px 0;
+    margin-top: 20px; /* Space the header from the top */
+    border-radius: 10px; /* Add slight roundness */
 }
 
 header h1 {
@@ -96,7 +98,7 @@ section p {
     margin: 10px;
     width: 30%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
+    border-radius: 10px; /* Add slight roundness */
     text-align: center;
     transition: transform 0.3s;
 }
@@ -124,7 +126,7 @@ section p {
     color: var(--secondary-color);
     background-color: var(--accent-color);
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 10px; /* Add slight roundness */
     transition: background-color 0.3s, transform 0.3s;
 }
 
@@ -139,6 +141,7 @@ footer {
     color: var(--secondary-color);
     text-align: center;
     padding: 10px 0;
+    border-radius: 10px; /* Add slight roundness */
 }
 
 /* Responsive Design */
