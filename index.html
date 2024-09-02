@@ -22,7 +22,9 @@
             </nav>
             <!-- Settings Button -->
             <div class="settings-button">
-                <a href="#settings"><img src="settings-icon.png" alt="Settings"></a>
+                <a href="javascript:void(0)" onclick="openSettingsPanel()">
+                    <img src="settings-icon.png" alt="Settings">
+                </a>
             </div>
         </div>
     </header>
@@ -79,15 +81,6 @@
         </div>
     </section>
 
-    <!-- Settings Section -->
-    <section id="settings" class="animate-fade-in">
-        <div class="container">
-            <h2>Settings</h2>
-            <p>Here you can manage your preferences and account settings.</p>
-            <!-- Add your settings form or options here -->
-        </div>
-    </section>
-
     <section id="contact" class="animate-fade-in">
         <div class="container">
             <h2>Contact Us</h2>
@@ -102,8 +95,17 @@
         </div>
     </footer>
 
-    <!-- JavaScript for Smooth Scrolling -->
+    <!-- Settings Panel -->
+    <div id="settingsPanel" class="settings-panel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeSettingsPanel()">&times;</a>
+        <h2>Settings</h2>
+        <p>Manage your preferences here.</p>
+        <!-- Add your settings options here -->
+    </div>
+
+    <!-- JavaScript for Smooth Scrolling and Settings Panel -->
     <script>
+        // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -112,6 +114,16 @@
                 });
             });
         });
+
+        // Open settings panel
+        function openSettingsPanel() {
+            document.getElementById("settingsPanel").style.width = "300px";
+        }
+
+        // Close settings panel
+        function closeSettingsPanel() {
+            document.getElementById("settingsPanel").style.width = "0";
+        }
     </script>
 </body>
 </html>
