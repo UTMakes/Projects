@@ -110,6 +110,35 @@ header nav ul li a:hover {
     transform: rotate(90deg);
 }
 
+/* Settings Panel */
+.settings-panel {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1001;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    color: white;
+}
+
+.settings-panel a.closebtn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 36px;
+    text-decoration: none;
+    color: white;
+}
+
+.settings-panel h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
 /* Sections */
 section {
     padding: 60px 0;
