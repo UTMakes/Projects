@@ -71,22 +71,23 @@ header nav ul {
 
 header nav ul li {
     margin: 0 10px;
-}
-
+/* Ensure this CSS is applied to the settings button */
 header nav ul li a {
     color: var(--secondary-color);
     text-decoration: none;
     padding: 10px 15px;
     border-radius: 10px;
     transition: background-color 0.3s, color 0.3s;
-    display: flex;
-    align-items: center; /* Aligns the icon vertically with the text */
+    /* Remove these lines if they exist */
+    /* display: flex;
+    align-items: center; */
 }
 
 header nav ul li a:hover {
     background-color: var(--nav-hover-background);
     color: var(--secondary-color);
 }
+
 
 /* Settings Icon Style */
 .settings-icon {
