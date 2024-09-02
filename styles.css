@@ -193,6 +193,22 @@ section p {
     color: #f0f0f0; /* Slightly off-white for better readability */
 }
 
+#roblox .btn {
+    display: inline-block;
+    padding: 15px 30px; /* Padding for the button */
+    color: var(--secondary-color); /* Text color */
+    background-color: var(--accent-color); /* Background color */
+    text-decoration: none;
+    border-radius: 10px; /* Rounded corners */
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 20px; /* Space above the button */
+}
+
+#roblox .btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight scale on hover */
+}
+
 /* Contact Section */
 #contact .btn {
     display: inline-block;
