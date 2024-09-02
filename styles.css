@@ -64,24 +64,20 @@ header nav ul {
     left: 50%;
     transform: translateX(-50%);
     background-color: var(--nav-background);
-    padding: 10px 20px;
-    border-radius: 20px;
+    padding: 5px 10px; /* Reduce padding to make the nav bar thinner */
+    border-radius: 15px; /* Adjust border-radius if needed */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-header nav ul li {
-    margin: 0 10px;
-/* Ensure this CSS is applied to the settings button */
 header nav ul li a {
     color: var(--secondary-color);
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 5px 10px; /* Reduce padding inside the links */
     border-radius: 10px;
     transition: background-color 0.3s, color 0.3s;
-    /* Remove these lines if they exist */
-    /* display: flex;
-    align-items: center; */
+    font-size: 0.9em; /* Optional: reduce font size for a thinner appearance */
 }
+
 
 header nav ul li a:hover {
     background-color: var(--nav-hover-background);
