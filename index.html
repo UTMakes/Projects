@@ -20,6 +20,10 @@
                     <li><a href="#contact" class="animate-slide-in">Contact</a></li>
                 </ul>
             </nav>
+            <!-- Settings Button -->
+            <div class="settings-button">
+                <a href="#settings"><img src="settings-icon.png" alt="Settings"></a>
+            </div>
         </div>
     </header>
 
@@ -33,7 +37,7 @@
     <section id="about" class="animate-fade-in">
         <div class="container">
             <h2>About Us</h2>
-            <p>NexusQ Studios is a Team of designers, developers dedicated to bringing your ideas to life. We specialize in web development, graphic design, and Promoting Apps</p>
+            <p>NexusQ Studios is a team of designers and developers dedicated to bringing your ideas to life. We specialize in web development, graphic design, and app promotions.</p>
         </div>
     </section>
 
@@ -47,11 +51,11 @@
                 </div>
                 <div class="service-item animate-slide-up">
                     <h3>Graphic Design</h3>
-                    <p>designs that capture your brand's essence.</p>
+                    <p>Designs that capture your brand's essence.</p>
                 </div>
                 <div class="service-item animate-slide-up">
                     <h3>App Promotions</h3>
-                    <p>Strategies to boost your online presence and reach your target audience (if App is good).</p>
+                    <p>Strategies to boost your online presence and reach your target audience.</p>
                 </div>
             </div>
         </div>
@@ -66,15 +70,23 @@
     </section>
 
     <!-- Roblox Section -->
-  <section id="roblox" class="animate-fade-in">
-    <div class="container">
-        <h2>Roblox</h2>
-        <p>Discover our Roblox community and offerings. We provide custom game development, scripting services.</p>
-        <p>Click the button below:</p> <!-- Text label above the button -->
-        <a href="#" class="btn">Text</a> <!-- Button -->
-    </div>
-</section>
+    <section id="roblox" class="animate-fade-in">
+        <div class="container">
+            <h2>Roblox</h2>
+            <p>Discover our Roblox community and offerings. We provide custom game development and scripting services.</p>
+            <p>Click the button below:</p>
+            <a href="#" class="btn">Text</a>
+        </div>
+    </section>
 
+    <!-- Settings Section -->
+    <section id="settings" class="animate-fade-in">
+        <div class="container">
+            <h2>Settings</h2>
+            <p>Here you can manage your preferences and account settings.</p>
+            <!-- Add your settings form or options here -->
+        </div>
+    </section>
 
     <section id="contact" class="animate-fade-in">
         <div class="container">
@@ -92,14 +104,11 @@
 
     <!-- JavaScript for Smooth Scrolling -->
     <script>
-        // Select all links with hashes
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
-
-                // Scroll to the element with the ID matching the href attribute of the anchor
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'  // Smooth scrolling
+                    behavior: 'smooth'
                 });
             });
         });
