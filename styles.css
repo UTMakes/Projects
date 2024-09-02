@@ -6,7 +6,7 @@
 }
 
 html {
-    scroll-behavior: smooth; /* Smooth scrolling for the entire document */
+    scroll-behavior: smooth;
 }
 
 body {
@@ -20,9 +20,9 @@ body {
 :root {
     --primary-color: #333;
     --secondary-color: #fff;
-    --accent-color: #007bff; /* Nice blue color */
-    --nav-background: rgba(0, 0, 0, 0.1); /* Slightly transparent background for nav */
-    --nav-hover-background: rgba(0, 0, 0, 0.2); /* Darker on hover */
+    --accent-color: #007bff;
+    --nav-background: rgba(0, 0, 0, 0.1);
+    --nav-hover-background: rgba(0, 0, 0, 0.2);
 }
 
 /* Container */
@@ -35,23 +35,23 @@ body {
 
 /* Header Styles */
 header {
-    background-color: var(--accent-color); /* Blue background */
-    color: var(--secondary-color); /* White text */
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
     padding: 20px;
-    margin-top: 20px; /* Space the header from the top */
-    margin-left: 20px; /* Add space on the left */
-    margin-right: 20px; /* Add space on the right */
-    border-radius: 10px; /* Add slight roundness */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: relative;
 }
 
 header h1 {
     text-align: center;
     margin: 0;
-    padding: 40px 0 20px 0; /* Increase top padding */
-    font-size: 2.5em; /* Increase font size for better emphasis */
-    color: var(--secondary-color); /* White text */
+    padding: 40px 0 20px 0;
+    font-size: 2.5em;
+    color: var(--secondary-color);
 }
 
 header nav ul {
@@ -59,13 +59,13 @@ header nav ul {
     justify-content: center;
     list-style: none;
     position: absolute;
-    top: 10px; /* Slight space from the top */
+    top: 10px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: var(--nav-background); /* Slightly transparent background */
+    background-color: var(--nav-background);
     padding: 10px 20px;
-    border-radius: 20px; /* Rounder edges for a modern look */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for the nav */
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 header nav ul li {
@@ -73,16 +73,41 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: var(--secondary-color); /* White text */
+    color: var(--secondary-color);
     text-decoration: none;
-    padding: 10px 15px; /* Increase padding for better touch target */
-    border-radius: 10px; /* Round edges for buttons */
+    padding: 10px 15px;
+    border-radius: 10px;
     transition: background-color 0.3s, color 0.3s;
 }
 
 header nav ul li a:hover {
-    background-color: var(--nav-hover-background); /* Darker background on hover */
-    color: var(--secondary-color); /* Keep text white on hover */
+    background-color: var(--nav-hover-background);
+    color: var(--secondary-color);
+}
+
+/* Settings Button */
+.settings-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.settings-button a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+}
+
+.settings-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s;
+}
+
+.settings-button img:hover {
+    transform: rotate(90deg);
 }
 
 /* Sections */
@@ -94,7 +119,7 @@ section h2 {
     text-align: center;
     margin-bottom: 20px;
     font-size: 2.5em;
-    color: var(--accent-color); /* Blue text */
+    color: var(--accent-color);
 }
 
 section p {
@@ -118,22 +143,22 @@ section p {
     padding: 20px;
     margin: 10px;
     width: 30%;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Slightly deeper shadow */
-    border-radius: 10px; /* Add slight roundness */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
     text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .service-item:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Enhance shadow on hover */
-    border: 2px solid var(--accent-color); /* Blue border on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    border: 2px solid var(--accent-color);
 }
 
 .service-item h3 {
-    font-size: 1.8em; /* Slightly larger */
+    font-size: 1.8em;
     margin-bottom: 10px;
-    color: var(--accent-color); /* Blue text */
+    color: var(--accent-color);
 }
 
 .service-item p {
@@ -143,8 +168,8 @@ section p {
 
 /* Minecraft Section */
 #minecraft {
-    background-color: #2e8b57; /* A greenish color reminiscent of Minecraft's grassy theme */
-    background-image: url('path-to-minecraft-background.jpg'); /* Add your Minecraft-related background image */
+    background-color: #2e8b57;
+    background-image: url('path-to-minecraft-background.jpg');
     background-size: cover;
     background-position: center;
     color: white;
@@ -156,21 +181,21 @@ section p {
 #minecraft h2 {
     font-size: 3em;
     margin-bottom: 20px;
-    color: #fff; /* White text for contrast */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle text shadow for better readability */
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 #minecraft p {
     font-size: 1.2em;
     max-width: 800px;
     margin: 0 auto;
-    color: #f0f0f0; /* Slightly off-white for better readability */
+    color: #f0f0f0;
 }
 
 /* Roblox Section */
 #roblox {
-    background-color: #ff4757; /* A bright red color reminiscent of the Roblox theme */
-    background-image: url('path-to-roblox-background.jpg'); /* Add your Roblox-related background image */
+    background-color: #ff4757;
+    background-image: url('path-to-roblox-background.jpg');
     background-size: cover;
     background-position: center;
     color: white;
@@ -182,47 +207,47 @@ section p {
 #roblox h2 {
     font-size: 3em;
     margin-bottom: 20px;
-    color: #fff; /* White text for contrast */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle text shadow for better readability */
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 #roblox p {
     font-size: 1.2em;
     max-width: 800px;
     margin: 0 auto;
-    color: #f0f0f0; /* Slightly off-white for better readability */
+    color: #f0f0f0;
 }
 
 #roblox .btn {
     display: inline-block;
-    padding: 15px 30px; /* Padding for the button */
-    color: var(--secondary-color); /* Text color */
-    background-color: var(--accent-color); /* Background color */
+    padding: 15px 30px;
+    color: var(--secondary-color);
+    background-color: var(--accent-color);
     text-decoration: none;
-    border-radius: 10px; /* Rounded corners */
+    border-radius: 10px;
     transition: background-color 0.3s, transform 0.3s;
-    margin-top: 20px; /* Space above the button */
+    margin-top: 20px;
 }
 
 #roblox .btn:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-    transform: scale(1.05); /* Slight scale on hover */
+    background-color: #0056b3;
+    transform: scale(1.05);
 }
 
 /* Contact Section */
 #contact .btn {
     display: inline-block;
-    padding: 15px 30px; /* Increase padding for prominence */
+    padding: 15px 30px;
     color: var(--secondary-color);
-    background-color: var(--accent-color); /* Blue background */
+    background-color: var(--accent-color);
     text-decoration: none;
-    border-radius: 10px; /* Add slight roundness */
+    border-radius: 10px;
     transition: background-color 0.3s, transform 0.3s;
 }
 
 #contact .btn:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-    transform: scale(1.05); /* Slight scale on hover */
+    background-color: #0056b3;
+    transform: scale(1.05);
 }
 
 /* Footer Styles */
@@ -231,8 +256,8 @@ footer {
     color: var(--secondary-color);
     text-align: center;
     padding: 20px 0;
-    border-radius: 10px; /* Add slight roundness */
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for footer */
+    border-radius: 10px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Responsive Design */
@@ -243,7 +268,7 @@ footer {
     }
 
     header nav ul {
-        top: 5px; /* Adjust top alignment for smaller screens */
+        top: 5px;
     }
 
     .services-list {
