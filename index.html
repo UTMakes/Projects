@@ -97,9 +97,9 @@
         <p>Manage your preferences here.</p>
         <!-- Dark Mode Toggle -->
         <div class="setting-item">
-            <label>Enable Dark Mode</label>
+            <label for="darkModeSwitch">Enable Dark Mode</label>
             <div class="toggle-switch">
-                <input type="checkbox" id="darkModeSwitch" onclick="toggleDarkMode()">
+                <input type="checkbox" id="darkModeSwitch">
                 <span class="slider"></span>
             </div>
         </div>
@@ -152,6 +152,9 @@
                 darkModeSwitch.checked = true;
             }
         }
+
+        // Event listener to apply dark mode when toggle is clicked
+        document.getElementById('darkModeSwitch').addEventListener('change', toggleDarkMode);
 
         // Load the settings when the page is loaded
         document.addEventListener('DOMContentLoaded', loadSettings);
