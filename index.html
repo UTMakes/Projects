@@ -72,7 +72,7 @@
             <h2>Roblox</h2>
             <p>Discover our Roblox community and offerings. We provide custom game development and scripting services.</p>
             <p>Click the button below to download our custom Roblox game:</p>
-            <a href="https://bloxstrap.org" class="btn" download>Download</a>
+            <a href="custom-roblox-game.zip" class="btn" download>Download</a>
         </div>
     </section>
 
@@ -96,8 +96,13 @@
         <h2>Settings</h2>
         <p>Manage your preferences here.</p>
         <!-- Dark Mode Toggle -->
-        <label for="darkModeSwitch">Enable Dark Mode</label>
-        <input type="checkbox" id="darkModeSwitch" onclick="toggleDarkMode()">
+        <div class="setting-item">
+            <label for="darkModeSwitch">Enable Dark Mode</label>
+            <div class="toggle-switch">
+                <input type="checkbox" id="darkModeSwitch" onclick="toggleDarkMode()">
+                <span class="slider"></span>
+            </div>
+        </div>
     </div>
 
     <!-- JavaScript for Smooth Scrolling, Settings Panel, and Dark Mode -->
