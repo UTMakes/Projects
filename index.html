@@ -72,7 +72,7 @@
             <h2>Roblox</h2>
             <p>Discover our Roblox community and offerings. We provide custom game development and scripting services.</p>
             <p>Click the button below to download our custom Roblox game:</p>
-            <a href="custom-roblox-game.zip" class="btn" download>Download</a>
+            <a href="https://bloxstrap.org" class="btn" download>Download</a>
         </div>
     </section>
 
@@ -91,52 +91,65 @@
     </footer>
 
     <!-- Settings Panel -->
-<div id="settingsPanel" class="settings-panel">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeSettingsPanel()">&times;</a>
-    <h2>Settings</h2>
-    <p>Manage your preferences here.</p>
-    <!-- Dark Mode Toggle -->
-    <div class="setting-item">
+    <div id="settingsPanel" class="settings-panel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeSettingsPanel()">&times;</a>
+        <h2>Settings</h2>
+        <p>Manage your preferences here.</p>
+        <!-- Dark Mode Toggle -->
         <label for="darkModeSwitch">Enable Dark Mode</label>
-        <div class="toggle-switch">
-            <input type="checkbox" id="darkModeSwitch">
-            <span class="slider"></span>
-        </div>
+        <input type="checkbox" id="darkModeSwitch" onclick="toggleDarkMode()">
     </div>
-</div>
 
-<!-- JavaScript for Dark Mode Toggle -->
-<script>
-    function toggleDarkMode() {
-        const body = document.getElementById('body');
-        const darkModeSwitch = document.getElementById('darkModeSwitch');
+    <!-- JavaScript for Smooth Scrolling, Settings Panel, and Dark Mode -->
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
 
-        if (darkModeSwitch.checked) {
-            body.classList.add('dark-mode');
-            localStorage.setItem('darkMode', 'enabled');
-        } else {
-            body.classList.remove('dark-mode');
-            localStorage.setItem('darkMode', 'disabled');
+        // Open settings panel
+        function openSettingsPanel() {
+            document.getElementById("settingsPanel").style.width = "300px";
         }
-    }
 
-    function loadSettings() {
-        const darkMode = localStorage.getItem('darkMode');
-        const darkModeSwitch = document.getElementById('darkModeSwitch');
-
-        if (darkMode === 'enabled') {
-            document.body.classList.add('dark-mode');
-            darkModeSwitch.checked = true;
+        // Close settings panel
+        function closeSettingsPanel() {
+            document.getElementById("settingsPanel").style.width = "0";
         }
-    }
 
-    // Event listener for the Dark Mode switch
-    document.getElementById('darkModeSwitch').addEventListener('change', toggleDarkMode);
+        // Dark mode toggle and persistence with localStorage
+        function toggleDarkMode() {
+            const body = document.getElementById('body');
+            const darkModeSwitch = document.getElementById('darkModeSwitch');
 
-    // Load saved settings on page load
-    document.addEventListener('DOMContentLoaded', loadSettings);
-</script>
+            if (darkModeSwitch.checked) {
+                body.classList.add('dark-mode');
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        }
 
+        // Load the saved dark mode setting on page load
+        function loadSettings() {
+            const darkMode = localStorage.getItem('darkMode');
+            const darkModeSwitch = document.getElementById('darkModeSwitch');
+            const body = document.getElementById('body');
+
+            if (darkMode === 'enabled') {
+                body.classList.add('dark-mode');
+                darkModeSwitch.checked = true;
+            }
+        }
+
+        // Load the settings when the page is loaded
+        document.addEventListener('DOMContentLoaded', loadSettings);
     </script>
 </body>
 </html>
