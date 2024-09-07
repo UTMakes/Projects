@@ -83,7 +83,7 @@ header nav ul {
 }
 
 header nav ul li a {
-    color: var(--secondary-color); /* Ensure bright text in light mode */
+    color: var(--secondary-color);
     text-decoration: none;
     padding: 5px 10px;
     border-radius: 10px;
@@ -96,20 +96,7 @@ header nav ul li a:hover {
     color: var(--secondary-color);
 }
 
-/* Dark Mode Styles for Navigation */
-body.dark-mode header nav ul {
-    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent for dark mode */
-}
-
-body.dark-mode header nav ul li a {
-    color: #ffffff; /* Brighter text in dark mode */
-}
-
-body.dark-mode header nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.3); /* Brighter hover effect in dark mode */
-}
-
-/* Settings Panel */
+/* Settings Panel Styles */
 .settings-panel {
     height: 100%;
     width: 0;
@@ -117,11 +104,12 @@ body.dark-mode header nav ul li a:hover {
     z-index: 1000;
     top: 0;
     right: 0;
-    background-color: #111;
+    background-color: #1e1e1e;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
     color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
 }
 
 .settings-panel a.closebtn {
@@ -136,6 +124,67 @@ body.dark-mode header nav ul li a:hover {
 .settings-panel h2 {
     text-align: center;
     margin-top: 20px;
+    color: #fff;
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
+    font-size: 24px;
+}
+
+.setting-item {
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #444;
+}
+
+.setting-item label {
+    font-size: 18px;
+}
+
+/* Toggle Switch Styles */
+.toggle-switch {
+    position: relative;
+    width: 50px;
+    height: 24px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: var(--accent-color);
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
 }
 
 /* Dark Mode Styling */
