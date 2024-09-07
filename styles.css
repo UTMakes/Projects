@@ -20,25 +20,9 @@ body {
 :root {
     --primary-color: #333;
     --secondary-color: #fff;
-    --accent-color: #007bff; /* Default blue */
+    --accent-color: #007bff;
     --nav-background: rgba(0, 0, 0, 0.1);
     --nav-hover-background: rgba(0, 0, 0, 0.2);
-}
-
-/* Dark Mode Specific */
-.dark-mode {
-    background-color: #222;
-    color: #ddd;
-}
-
-.dark-mode header, .dark-mode footer {
-    background-color: #333;
-    color: #fff;
-}
-
-.dark-mode section {
-    background-color: #444;
-    color: #ccc;
 }
 
 /* Container */
@@ -94,10 +78,12 @@ header nav ul li a {
     font-size: 0.88em; /* Optional: reduce font size for a thinner appearance */
 }
 
+
 header nav ul li a:hover {
     background-color: var(--nav-hover-background);
     color: var(--secondary-color);
 }
+
 
 /* Settings Icon Style */
 .settings-icon {
@@ -157,7 +143,6 @@ section p {
     color: #555;
 }
 
-/* Services Section */
 .services-list {
     display: flex;
     justify-content: space-around;
@@ -333,11 +318,6 @@ footer {
     animation: bounce 1s infinite;
 }
 
-.animate-grow {
-    transform: scale(0.9);
-    animation: grow 0.5s forwards;
-}
-
 /* Keyframes */
 @keyframes fadeIn {
     to {
@@ -365,27 +345,4 @@ footer {
     50% {
         transform: translateY(-10px);
     }
-}
-
-@keyframes grow {
-    to {
-        transform: scale(1);
-    }
-}
-
-/* Buttons */
-.btn {
-    padding: 15px 30px;
-    color: var(--secondary-color);
-    background-color: var(--accent-color);
-    text-decoration: none;
-    border-radius: 10px;
-    transition: background-color 0.3s, transform 0.3s;
-    margin-top: 20px;
-}
-
-.btn:hover {
-    background-color: #0056b3;
-    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
-    transform: translateY(-2px);
 }
