@@ -94,13 +94,21 @@
     <div id="settingsPanel" class="settings-panel">
         <a href="javascript:void(0)" class="closebtn" onclick="closeSettingsPanel()">&times;</a>
         <h2>Settings</h2>
-        <p>Manage your preferences here.</p>
-        <!-- Dark Mode Toggle -->
-        <label for="darkModeSwitch">Enable Dark Mode</label>
-        <input type="checkbox" id="darkModeSwitch" onclick="toggleDarkMode()">
+        
+        <div class="settings-option">
+            <p>Dark Mode:</p>
+            <a href="javascript:void(0)" onclick="toggleDarkMode()" class="btn-settings">Enable</a>
+        </div>
+
+        <div class="settings-option">
+            <p>Font Size:</p>
+            <a href="javascript:void(0)" onclick="setFontSize('small')" class="btn-settings">Small</a>
+            <a href="javascript:void(0)" onclick="setFontSize('medium')" class="btn-settings">Medium</a>
+            <a href="javascript:void(0)" onclick="setFontSize('large')" class="btn-settings">Large</a>
+        </div>
     </div>
 
-    <!-- JavaScript for Smooth Scrolling, Settings Panel, and Dark Mode -->
+    <!-- JavaScript for Smooth Scrolling, Settings Panel, Dark Mode, and Font Size -->
     <script>
         // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -125,9 +133,9 @@
         // Dark mode toggle and persistence with localStorage
         function toggleDarkMode() {
             const body = document.getElementById('body');
-            const darkModeSwitch = document.getElementById('darkModeSwitch');
+            const darkMode = localStorage.getItem('darkMode');
 
-            if (darkModeSwitch.checked) {
+            if (darkMode !== 'enabled') {
                 body.classList.add('dark-mode');
                 localStorage.setItem('darkMode', 'enabled');
             } else {
@@ -136,19 +144,38 @@
             }
         }
 
-        // Load the saved dark mode setting on page load
+        // Change Font Size
+        function setFontSize(size) {
+            const body = document.getElementById('body');
+
+            if (size === 'small') {
+                body.style.fontSize = '14px';
+            } else if (size === 'medium') {
+                body.style.fontSize = '16px';
+            } else if (size === 'large') {
+                body.style.fontSize = '18px';
+            }
+
+            // Save the setting in localStorage
+            localStorage.setItem('fontSize', size);
+        }
+
+        // Load the saved dark mode and font size settings on page load
         function loadSettings() {
             const darkMode = localStorage.getItem('darkMode');
-            const darkModeSwitch = document.getElementById('darkModeSwitch');
+            const fontSize = localStorage.getItem('fontSize');
             const body = document.getElementById('body');
 
             if (darkMode === 'enabled') {
                 body.classList.add('dark-mode');
-                darkModeSwitch.checked = true;
+            }
+
+            if (fontSize) {
+                setFontSize(fontSize);
             }
         }
 
-        // Load the settings when the page is loaded
+        // Load settings when the page is loaded
         document.addEventListener('DOMContentLoaded', loadSettings);
     </script>
 </body>
