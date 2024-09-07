@@ -97,9 +97,9 @@
         <p>Manage your preferences here.</p>
         <!-- Dark Mode Toggle -->
         <div class="setting-item">
-            <label>Enable Dark Mode</label>
+            <label for="darkModeSwitch">Enable Dark Mode</label>
             <div class="toggle-switch">
-                <input type="checkbox" id="darkModeSwitch">
+                <input type="checkbox" id="darkModeSwitch" class="dark-mode-checkbox">
                 <span class="slider"></span>
             </div>
         </div>
@@ -107,16 +107,6 @@
 
     <!-- JavaScript for Smooth Scrolling, Settings Panel, and Dark Mode -->
     <script>
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
         // Open settings panel
         function openSettingsPanel() {
             document.getElementById("settingsPanel").style.width = "300px";
@@ -145,10 +135,9 @@
         function loadSettings() {
             const darkMode = localStorage.getItem('darkMode');
             const darkModeSwitch = document.getElementById('darkModeSwitch');
-            const body = document.getElementById('body');
 
             if (darkMode === 'enabled') {
-                body.classList.add('dark-mode');
+                document.body.classList.add('dark-mode');
                 darkModeSwitch.checked = true;
             }
         }
