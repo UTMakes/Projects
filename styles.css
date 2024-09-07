@@ -16,26 +16,29 @@ body {
     color: #333;
 }
 
-body.dark-mode {
-    background-color: #121212;
-    color: #f4f4f4;
-}
-
 /* CSS Variables */
 :root {
     --primary-color: #333;
     --secondary-color: #fff;
-    --accent-color: #007bff;
+    --accent-color: #007bff; /* Default blue */
     --nav-background: rgba(0, 0, 0, 0.1);
     --nav-hover-background: rgba(0, 0, 0, 0.2);
 }
 
-body.dark-mode :root {
-    --primary-color: #f4f4f4;
-    --secondary-color: #121212;
-    --accent-color: #bb86fc;
-    --nav-background: rgba(255, 255, 255, 0.1);
-    --nav-hover-background: rgba(255, 255, 255, 0.2);
+/* Dark Mode Specific */
+.dark-mode {
+    background-color: #222;
+    color: #ddd;
+}
+
+.dark-mode header, .dark-mode footer {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode section {
+    background-color: #444;
+    color: #ccc;
 }
 
 /* Container */
@@ -96,6 +99,13 @@ header nav ul li a:hover {
     color: var(--secondary-color);
 }
 
+/* Settings Icon Style */
+.settings-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 8px; /* Add some spacing between the text and the icon */
+}
+
 /* Settings Panel */
 .settings-panel {
     height: 100%;
@@ -125,29 +135,6 @@ header nav ul li a:hover {
     margin-top: 20px;
 }
 
-/* Dark Mode Styling */
-body.dark-mode header {
-    background-color: var(--accent-color);
-    color: var(--primary-color);
-}
-
-body.dark-mode footer {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-}
-
-body.dark-mode a {
-    color: var(--accent-color);
-}
-
-body.dark-mode section h2 {
-    color: var(--accent-color);
-}
-
-body.dark-mode section p {
-    color: #f0f0f0;
-}
-
 /* Sections */
 section {
     padding: 60px 0;
@@ -170,7 +157,7 @@ section p {
     color: #555;
 }
 
-/* Services Section */
+/* Service Section */
 .services-list {
     display: flex;
     justify-content: space-around;
@@ -346,7 +333,11 @@ footer {
     animation: bounce 1s infinite;
 }
 
-/* Keyframes */
+.animate-grow {
+    transform: scale(0.9);
+    animation: grow 0.5s forwards;
+}
+
 @keyframes fadeIn {
     to {
         opacity: 1;
@@ -373,4 +364,27 @@ footer {
     50% {
         transform: translateY(-10px);
     }
+}
+
+@keyframes grow {
+    to {
+        transform: scale(1);
+    }
+}
+
+/* Buttons */
+.btn {
+    padding: 15px 30px;
+    color: var(--secondary-color);
+    background-color: var(--accent-color);
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+    transform: translateY(-2px);
 }
