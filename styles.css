@@ -205,7 +205,50 @@ section p {
     color: var(--accent-color); /* Keeping accent color for titles */
 }
 
-.dark-mode .service-item p
+.dark-mode .service-item p {
+    color: #ccc; /* Lighter text color for service item descriptions */
+}
+
+/* Dark Mode Minecraft Section */
+.dark-mode #minecraft {
+    background-color: #006400; /* Dark green background color */
+    color: #f0f0f0; /* Light text color for contrast */
+    background-image: none; /* Remove background image if you want a solid color */
+}
+
+.dark-mode #minecraft h2 {
+    color: #90ee90; /* Lighter green for the heading */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Keep text shadow for visibility */
+}
+
+.dark-mode #minecraft p {
+    color: #dcdcdc; /* Lighter color for paragraph text */
+}
+
+/* Dark Mode Roblox Section */
+.dark-mode #roblox {
+    background-color: #8b0000; /* Dark red background color */
+    color: #f0f0f0; /* Light text color for contrast */
+    background-image: none; /* Remove background image if you want a solid color */
+}
+
+.dark-mode #roblox h2 {
+    color: #ff6347; /* Lighter red for the heading */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Keep text shadow for visibility */
+}
+
+.dark-mode #roblox p {
+    color: #dcdcdc; /* Lighter color for paragraph text */
+}
+
+.dark-mode #roblox .btn {
+    background-color: #ff6347; /* Lighter red button */
+    color: #f0f0f0; /* Button text color */
+}
+
+.dark-mode #roblox .btn:hover {
+    background-color: #ff4500; /* Slightly darker red on hover */
+}
 
 
 /* Minecraft Section */
