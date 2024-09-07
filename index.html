@@ -42,15 +42,15 @@
         <div class="container">
             <h2>Our Services</h2>
             <div class="services-list">
-                <div class="service-item animate-slide-up animate-grow">
+                <div class="service-item animate-slide-up">
                     <h3>Web Development</h3>
                     <p>Custom websites built with the latest technologies.</p>
                 </div>
-                <div class="service-item animate-slide-up animate-grow">
+                <div class="service-item animate-slide-up">
                     <h3>Graphic Design</h3>
                     <p>Designs that capture your brand's essence.</p>
                 </div>
-                <div class="service-item animate-slide-up animate-grow">
+                <div class="service-item animate-slide-up">
                     <h3>App Promotions</h3>
                     <p>Strategies to boost your online presence and reach your target audience.</p>
                 </div>
@@ -72,16 +72,15 @@
             <h2>Roblox</h2>
             <p>Discover our Roblox community and offerings. We provide custom game development and scripting services.</p>
             <p>Click the button below to download our custom Roblox game:</p>
-            <a href="https://bloxstrap.org" class="btn animate-grow" download>Download</a>
+            <a href="https://bloxstrap.org" class="btn" download>Download</a>
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="animate-fade-in">
         <div class="container">
             <h2>Contact Us</h2>
             <p>Get in touch with us to discuss your next project.</p>
-            <a href="mailto:info@nexusqstudios.com" class="btn animate-bounce animate-grow">Email Us</a>
+            <a href="mailto:info@nexusqstudios.com" class="btn animate-bounce">Email Us</a>
         </div>
     </section>
 
@@ -130,11 +129,9 @@
 
             if (darkModeSwitch.checked) {
                 body.classList.add('dark-mode');
-                document.documentElement.style.setProperty('--accent-color', '#9b59b6'); // Change accent to purple in dark mode
                 localStorage.setItem('darkMode', 'enabled');
             } else {
                 body.classList.remove('dark-mode');
-                document.documentElement.style.setProperty('--accent-color', '#007bff'); // Change accent back to blue in light mode
                 localStorage.setItem('darkMode', 'disabled');
             }
         }
@@ -147,7 +144,6 @@
 
             if (darkMode === 'enabled') {
                 body.classList.add('dark-mode');
-                document.documentElement.style.setProperty('--accent-color', '#9b59b6'); // Set to purple in dark mode
                 darkModeSwitch.checked = true;
             }
         }
