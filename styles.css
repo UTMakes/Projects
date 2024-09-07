@@ -16,6 +16,11 @@ body {
     color: #333;
 }
 
+body.dark-mode {
+    background-color: #121212;
+    color: #f4f4f4;
+}
+
 /* CSS Variables */
 :root {
     --primary-color: #333;
@@ -23,6 +28,14 @@ body {
     --accent-color: #007bff;
     --nav-background: rgba(0, 0, 0, 0.1);
     --nav-hover-background: rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode :root {
+    --primary-color: #f4f4f4;
+    --secondary-color: #121212;
+    --accent-color: #bb86fc;
+    --nav-background: rgba(255, 255, 255, 0.1);
+    --nav-hover-background: rgba(255, 255, 255, 0.2);
 }
 
 /* Container */
@@ -64,32 +77,23 @@ header nav ul {
     left: 50%;
     transform: translateX(-50%);
     background-color: var(--nav-background);
-    padding: 5px 10px; /* Reduce padding to make the nav bar thinner */
-    border-radius: 15px; /* Adjust border-radius if needed */
+    padding: 5px 10px;
+    border-radius: 15px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 header nav ul li a {
     color: var(--secondary-color);
     text-decoration: none;
-    padding: 5px 10px; /* Reduce padding inside the links */
+    padding: 5px 10px;
     border-radius: 10px;
     transition: background-color 0.3s, color 0.3s;
-    font-size: 0.88em; /* Optional: reduce font size for a thinner appearance */
+    font-size: 0.88em;
 }
-
 
 header nav ul li a:hover {
     background-color: var(--nav-hover-background);
     color: var(--secondary-color);
-}
-
-
-/* Settings Icon Style */
-.settings-icon {
-    width: 20px;
-    height: 20px;
-    margin-left: 8px; /* Add some spacing between the text and the icon */
 }
 
 /* Settings Panel */
