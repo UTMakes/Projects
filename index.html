@@ -6,7 +6,7 @@
     <title>NexusQ Studios</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body id="body">
     <header>
         <div class="container">
             <h1 class="animate-fade-in">NexusQ Studios</h1>
@@ -95,10 +95,12 @@
         <a href="javascript:void(0)" class="closebtn" onclick="closeSettingsPanel()">&times;</a>
         <h2>Settings</h2>
         <p>Manage your preferences here.</p>
-        <!-- Add your settings options here -->
+        <!-- Dark Mode Toggle -->
+        <label for="darkModeSwitch">Enable Dark Mode</label>
+        <input type="checkbox" id="darkModeSwitch" onclick="toggleDarkMode()">
     </div>
 
-    <!-- JavaScript for Smooth Scrolling and Settings Panel -->
+    <!-- JavaScript for Smooth Scrolling, Settings Panel, and Dark Mode -->
     <script>
         // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -118,6 +120,12 @@
         // Close settings panel
         function closeSettingsPanel() {
             document.getElementById("settingsPanel").style.width = "0";
+        }
+
+        // Dark mode toggle
+        function toggleDarkMode() {
+            const body = document.getElementById('body');
+            body.classList.toggle('dark-mode');
         }
     </script>
 </body>
