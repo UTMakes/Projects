@@ -72,7 +72,7 @@
             <h2>Roblox</h2>
             <p>Discover our Roblox community and offerings. We provide custom game development and scripting services.</p>
             <p>Click the button below to download our custom Roblox game:</p>
-            <a href="https://bloxstrap.org" class="btn" download>Download</a> <!-- Updated Download Button -->
+            <a href="custom-roblox-game.zip" class="btn" download>Download</a> <!-- Updated Download Button -->
         </div>
     </section>
 
@@ -122,11 +122,34 @@
             document.getElementById("settingsPanel").style.width = "0";
         }
 
-        // Dark mode toggle
+        // Dark mode toggle and persistence with localStorage
         function toggleDarkMode() {
             const body = document.getElementById('body');
-            body.classList.toggle('dark-mode');
+            const darkModeSwitch = document.getElementById('darkModeSwitch');
+
+            if (darkModeSwitch.checked) {
+                body.classList.add('dark-mode');
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('darkMode', 'disabled');
+            }
         }
+
+        // Load the saved dark mode setting on page load
+        function loadSettings() {
+            const darkMode = localStorage.getItem('darkMode');
+            const darkModeSwitch = document.getElementById('darkModeSwitch');
+            const body = document.getElementById('body');
+
+            if (darkMode === 'enabled') {
+                body.classList.add('dark-mode');
+                darkModeSwitch.checked = true;
+            }
+        }
+
+        // Load the settings when the page is loaded
+        document.addEventListener('DOMContentLoaded', loadSettings);
     </script>
 </body>
 </html>
