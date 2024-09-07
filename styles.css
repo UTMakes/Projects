@@ -147,6 +147,7 @@ header nav ul li a:hover {
     position: relative;
     width: 50px;
     height: 24px;
+    display: inline-block;
 }
 
 .toggle-switch input {
