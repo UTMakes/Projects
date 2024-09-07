@@ -83,7 +83,7 @@ header nav ul {
 }
 
 header nav ul li a {
-    color: var(--secondary-color);
+    color: var(--secondary-color); /* Ensure bright text in light mode */
     text-decoration: none;
     padding: 5px 10px;
     border-radius: 10px;
@@ -94,6 +94,19 @@ header nav ul li a {
 header nav ul li a:hover {
     background-color: var(--nav-hover-background);
     color: var(--secondary-color);
+}
+
+/* Dark Mode Styles for Navigation */
+body.dark-mode header nav ul {
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent for dark mode */
+}
+
+body.dark-mode header nav ul li a {
+    color: #ffffff; /* Brighter text in dark mode */
+}
+
+body.dark-mode header nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Brighter hover effect in dark mode */
 }
 
 /* Settings Panel */
