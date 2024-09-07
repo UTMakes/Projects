@@ -176,6 +176,37 @@ section p {
     font-size: 1.1em;
     color: #666;
 }
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+.dark-mode header {
+    background-color: #1a1a1a;
+}
+
+.dark-mode a {
+    color: #f0f0f0;
+}
+
+.dark-mode .service-item {
+    background-color: #222;
+    color: #f0f0f0; /* Text color for service items in dark mode */
+    border: 2px solid var(--accent-color); /* Keeping the accent color for borders */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6); /* Darker shadow for service items */
+}
+
+.dark-mode .service-item:hover {
+    border: 2px solid #0056b3; /* Adjust hover border color for dark mode */
+}
+
+.dark-mode .service-item h3 {
+    color: var(--accent-color); /* Keeping accent color for titles */
+}
+
+.dark-mode .service-item p
+
 
 /* Minecraft Section */
 #minecraft {
