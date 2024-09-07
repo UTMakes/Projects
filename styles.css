@@ -64,61 +64,30 @@ header nav ul {
     left: 50%;
     transform: translateX(-50%);
     background-color: var(--nav-background);
-    padding: 5px 10px; /* Reduce padding to make the nav bar thinner */
-    border-radius: 15px; /* Adjust border-radius if needed */
+    padding: 5px 10px;
+    border-radius: 15px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 header nav ul li a {
     color: var(--secondary-color);
     text-decoration: none;
-    padding: 5px 10px; /* Reduce padding inside the links */
+    padding: 5px 10px;
     border-radius: 10px;
     transition: background-color 0.3s, color 0.3s;
-    font-size: 0.88em; /* Optional: reduce font size for a thinner appearance */
+    font-size: 0.88em;
 }
-
 
 header nav ul li a:hover {
     background-color: var(--nav-hover-background);
     color: var(--secondary-color);
 }
 
-
 /* Settings Icon Style */
 .settings-icon {
     width: 20px;
     height: 20px;
-    margin-left: 8px; /* Add some spacing between the text and the icon */
-}
-
-/* Settings Panel */
-.settings-panel {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    right: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-    color: white;
-}
-
-.settings-panel a.closebtn {
-    position: absolute;
-    top: 20px;
-    right: 25px;
-    font-size: 36px;
-    text-decoration: none;
-    color: white;
-}
-
-.settings-panel h2 {
-    text-align: center;
-    margin-top: 20px;
+    margin-left: 8px;
 }
 
 /* Sections */
@@ -176,119 +145,6 @@ section p {
     font-size: 1.1em;
     color: #666;
 }
-/* Dark Mode Styles */
-.dark-mode {
-    background-color: #121212;
-    color: #f0f0f0;
-}
-/* Dark Mode Minecraft Section */
-.dark-mode #minecraft {
-    background-color: #006400; /* Dark green background color */
-    color: #f0f0f0; /* Light text color for contrast */
-    background-image: none; /* Remove background image if you want a solid color */
-}
-
-.dark-mode #minecraft h2 {
-    color: #90ee90; /* Lighter green for the heading */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Keep text shadow for visibility */
-}
-
-.dark-mode #minecraft p {
-    color: #dcdcdc; /* Lighter color for paragraph text */
-}
-
-/* Dark Mode Roblox Section */
-.dark-mode #roblox {
-    background-color: #8b0000; /* Dark red background color */
-    color: #f0f0f0; /* Light text color for contrast */
-    background-image: none; /* Remove background image if you want a solid color */
-}
-
-.dark-mode #roblox h2 {
-    color: #ff6347; /* Lighter red for the heading */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Keep text shadow for visibility */
-}
-
-.dark-mode #roblox p {
-    color: #dcdcdc; /* Lighter color for paragraph text */
-}
-
-.dark-mode #roblox .btn {
-    background-color: #ff6347; /* Lighter red button */
-    color: #f0f0f0; /* Button text color */
-}
-
-.dark-mode #roblox .btn:hover {
-    background-color: #ff4500; /* Slightly darker red on hover */
-}
-.dark-mode header {
-    background-color: #1a1a1a;
-}
-
-.dark-mode a {
-    color: #f0f0f0;
-}
-
-.dark-mode .service-item {
-    background-color: #222;
-    color: #f0f0f0; /* Text color for service items in dark mode */
-    border: 2px solid var(--accent-color); /* Keeping the accent color for borders */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6); /* Darker shadow for service items */
-}
-
-.dark-mode .service-item:hover {
-    border: 2px solid #0056b3; /* Adjust hover border color for dark mode */
-}
-
-.dark-mode .service-item h3 {
-    color: var(--accent-color); /* Keeping accent color for titles */
-}
-
-.dark-mode .service-item p {
-    color: #ccc; /* Lighter text color for service item descriptions */
-}
-
-/* Dark Mode Minecraft Section */
-.dark-mode #minecraft {
-    background-color: #006400; /* Dark green background color */
-    color: #f0f0f0; /* Light text color for contrast */
-    background-image: none; /* Remove background image if you want a solid color */
-}
-
-.dark-mode #minecraft h2 {
-    color: #90ee90; /* Lighter green for the heading */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Keep text shadow for visibility */
-}
-
-.dark-mode #minecraft p {
-    color: #dcdcdc; /* Lighter color for paragraph text */
-}
-
-/* Dark Mode Roblox Section */
-.dark-mode #roblox {
-    background-color: #8b0000; /* Dark red background color */
-    color: #f0f0f0; /* Light text color for contrast */
-    background-image: none; /* Remove background image if you want a solid color */
-}
-
-.dark-mode #roblox h2 {
-    color: #ff6347; /* Lighter red for the heading */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Keep text shadow for visibility */
-}
-
-.dark-mode #roblox p {
-    color: #dcdcdc; /* Lighter color for paragraph text */
-}
-
-.dark-mode #roblox .btn {
-    background-color: #ff6347; /* Lighter red button */
-    color: #f0f0f0; /* Button text color */
-}
-
-.dark-mode #roblox .btn:hover {
-    background-color: #ff4500; /* Slightly darker red on hover */
-}
-
 
 /* Minecraft Section */
 #minecraft {
@@ -458,4 +314,152 @@ footer {
     50% {
         transform: translateY(-10px);
     }
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+.dark-mode header {
+    background-color: #1a1a1a;
+}
+
+.dark-mode a {
+    color: #f0f0f0;
+}
+
+.dark-mode .service-item {
+    background-color: #222;
+    color: #f0f0f0;
+    border: 2px solid var(--accent-color);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+.dark-mode .service-item:hover {
+    border: 2px solid #0056b3;
+}
+
+.dark-mode .service-item h3 {
+    color: var(--accent-color);
+}
+
+.dark-mode .service-item p {
+    color: #ccc;
+}
+
+.dark-mode #minecraft {
+    background-color: #006400;
+    color: #f0f0f0;
+    background-image: none;
+}
+
+.dark-mode #minecraft h2 {
+    color: #90ee90;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode #minecraft p {
+    color: #dcdcdc;
+}
+
+.dark-mode #roblox {
+    background-color: #8b0000;
+    color: #f0f0f0;
+    background-image: none;
+}
+
+.dark-mode #roblox h2 {
+    color: #ff6347;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode #roblox p {
+    color: #dcdcdc;
+}
+
+.dark-mode #roblox .btn {
+    background-color: #ff6347;
+    color: #f0f0f0;
+}
+
+.dark-mode #roblox .btn:hover {
+    background-color: #ff4500;
+}
+
+/* Upgraded Settings Panel Styles */
+.settings-panel {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    background-color: #222;
+    color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding: 20px;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.5);
+    border-radius: 10px 0 0 10px;
+}
+
+.settings-panel a.closebtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 36px;
+    text-decoration: none;
+    color: white;
+}
+
+.settings-panel h2 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2em;
+    color: var(--accent-color);
+}
+
+/* Settings Options */
+.settings-option {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.settings-option p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #ccc;
+}
+
+/* Settings Buttons */
+.btn-settings {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-settings:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Dark Mode for Settings Panel */
+.dark-mode .settings-panel {
+    background-color: #111;
+    color: white;
+}
+
+.dark-mode .settings-option p {
+    color: #eee;
+}
+
+.dark-mode .btn-settings {
+    background-color: #333;
 }
