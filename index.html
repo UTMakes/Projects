@@ -146,7 +146,6 @@
             document.getElementById("settingsPanel").style.width = "0";
         }
 
-        // Function to toggle dark mode
         function toggleDarkMode() {
             const body = document.getElementById('body');
             const darkMode = localStorage.getItem('darkMode');
@@ -168,7 +167,12 @@
             }
         }
 
-        // Function to change the background color
+        function setFontSize(size) {
+            const body = document.getElementById('body');
+            body.style.fontSize = size === 'small' ? '14px' : size === 'medium' ? '16px' : '18px';
+            localStorage.setItem('fontSize', size);
+        }
+
         function changeBackgroundColor(color) {
             const body = document.getElementById('body');
             const darkMode = localStorage.getItem('darkMode');
@@ -180,7 +184,110 @@
             }
         }
 
-        // Load settings on page load
+        function changeTextAlignment(alignment) {
+            const elements = document.querySelectorAll('p, h2');
+            elements.forEach(el => el.style.textAlign = alignment);
+            localStorage.setItem('textAlign', alignment);
+        }
+
+        function changeLanguage(language) {
+            const elements = document.querySelectorAll('[data-lang]');
+            elements.forEach(el => {
+                const key = el.getAttribute('data-lang');
+                el.textContent = translations[language][key];
+            });
+            localStorage.setItem('language', language);
+        }
+
+        const translations = {
+            en: {
+                nexusq: "NexusQ Studios",
+                home: "Home",
+                about: "About",
+                services: "Services",
+                minecraft: "Minecraft",
+                roblox: "Roblox",
+                contact: "Contact",
+                settings: "Settings",
+                welcome: "Welcome to NexusQ Studios",
+                description: "We are a creative studio offering innovative solutions for your digital needs.",
+                aboutUs: "About Us",
+                aboutDescription: "NexusQ Studios is a team of designers and developers dedicated to bringing your ideas to life.",
+                ourServices: "Our Services",
+                webDevelopment: "Web Development",
+                webDescription: "Custom websites built with the latest technologies.",
+                graphicDesign: "Graphic Design",
+                graphicDescription: "Designs that capture your brand's essence.",
+                appPromotions: "App Promotions",
+                appDescription: "Strategies to boost your online presence and reach your target audience.",
+                minecraftDescription: "Explore our Minecraft content and services.",
+                robloxDescription: "Discover our Roblox community and offerings.",
+                download: "Download",
+                contactUs: "Contact Us",
+                emailUs: "Email Us",
+                footerText: "&copy; 2024 NexusQ Studios. All rights reserved.",
+                darkMode: "Dark Mode:",
+                fontSize: "Font Size:",
+                bgColor: "Background Color:",
+                textAlign: "Text Alignment:",
+                white: "White",
+                lightGrey: "Light Grey",
+                black: "Black",
+                small: "Small",
+                medium: "Medium",
+                large: "Large",
+                left: "Left",
+                center: "Center",
+                right: "Right",
+                language: "Language:",
+                english: "English",
+                spanish: "Spanish"
+            },
+            es: {
+                nexusq: "NexusQ Studios",
+                home: "Inicio",
+                about: "Sobre Nosotros",
+                services: "Servicios",
+                minecraft: "Minecraft",
+                roblox: "Roblox",
+                contact: "Contacto",
+                settings: "Configuración",
+                welcome: "Bienvenido a NexusQ Studios",
+                description: "Somos un estudio creativo que ofrece soluciones innovadoras para tus necesidades digitales.",
+                aboutUs: "Sobre Nosotros",
+                aboutDescription: "NexusQ Studios es un equipo de diseñadores y desarrolladores dedicados a hacer realidad tus ideas.",
+                ourServices: "Nuestros Servicios",
+                webDevelopment: "Desarrollo Web",
+                webDescription: "Sitios web personalizados con las últimas tecnologías.",
+                graphicDesign: "Diseño Gráfico",
+                graphicDescription: "Diseños que capturan la esencia de tu marca.",
+                appPromotions: "Promoción de Apps",
+                appDescription: "Estrategias para aumentar tu presencia en línea.",
+                minecraftDescription: "Explora nuestro contenido y servicios de Minecraft.",
+                robloxDescription: "Descubre nuestra comunidad y servicios de Roblox.",
+                download: "Descargar",
+                contactUs: "Contáctanos",
+                emailUs: "Envíanos un Correo",
+                footerText: "&copy; 2024 NexusQ Studios. Todos los derechos reservados.",
+                darkMode: "Modo Oscuro:",
+                fontSize: "Tamaño de Fuente:",
+                bgColor: "Color de Fondo:",
+                textAlign: "Alineación del Texto:",
+                white: "Blanco",
+                lightGrey: "Gris Claro",
+                black: "Negro",
+                small: "Pequeño",
+                medium: "Medio",
+                large: "Grande",
+                left: "Izquierda",
+                center: "Centro",
+                right: "Derecha",
+                language: "Idioma:",
+                english: "Inglés",
+                spanish: "Español"
+            }
+        };
+
         function loadSettings() {
             const language = localStorage.getItem('language') || 'en';
             changeLanguage(language);
