@@ -26,21 +26,21 @@
 
     <section id="home" class="animate-fade-in">
         <div class="container">
-            <h2>Welcome to NexusQ Studios</h2>
+            <h2 data-lang="welcome">Welcome to NexusQ Studios</h2>
             <p>We are a creative studio offering innovative solutions for your digital needs.</p>
         </div>
     </section>
 
     <section id="about" class="animate-fade-in">
         <div class="container">
-            <h2>About Us</h2>
+            <h2 data-lang="aboutUs">About Us</h2>
             <p>NexusQ Studios is a team of designers and developers dedicated to bringing your ideas to life. We specialize in web development, graphic design, and app promotions.</p>
         </div>
     </section>
 
     <section id="services" class="animate-fade-in">
         <div class="container">
-            <h2>Our Services</h2>
+            <h2 data-lang="services">Our Services</h2>
             <div class="services-list">
                 <div class="service-item animate-slide-up">
                     <h3>Web Development</h3>
@@ -58,29 +58,25 @@
         </div>
     </section>
 
-    <!-- Minecraft Section -->
     <section id="minecraft" class="animate-fade-in">
         <div class="container">
-            <h2>Minecraft</h2>
+            <h2 data-lang="minecraft">Minecraft</h2>
             <p>Explore our Minecraft content and services. We offer custom mod creation and more to enhance your Minecraft experience.</p>
         </div>
     </section>
 
-    <!-- Roblox Section -->
     <section id="roblox" class="animate-fade-in">
         <div class="container">
-            <h2>Roblox</h2>
+            <h2 data-lang="roblox">Roblox</h2>
             <p>Discover our Roblox community and offerings. We provide custom game development and scripting services.</p>
-            <p>Click the button below to download our custom Roblox game:</p>
-            <a href="https://bloxstrap.org" class="btn" download>Download</a>
+            <a href="https://bloxstrap.org" class="btn" download data-lang="download">Download</a>
         </div>
     </section>
 
     <section id="contact" class="animate-fade-in">
         <div class="container">
-            <h2>Contact Us</h2>
-            <p>Get in touch with us to discuss your next project.</p>
-            <a href="mailto:info@nexusqstudios.com" class="btn animate-bounce">Email Us</a>
+            <h2 data-lang="contactUs">Contact Us</h2>
+            <a href="mailto:info@nexusqstudios.com" class="btn animate-bounce" data-lang="emailUs">Email Us</a>
         </div>
     </section>
 
@@ -107,7 +103,6 @@
             <a href="javascript:void(0)" onclick="setFontSize('large')" class="btn-settings">Large</a>
         </div>
 
-        <!-- New Options -->
         <div class="settings-option">
             <p>Background Color:</p>
             <a href="javascript:void(0)" onclick="changeBackgroundColor('#ffffff')" class="btn-settings">White</a>
@@ -116,14 +111,21 @@
         </div>
 
         <div class="settings-option">
-            <p>Text Alignment(may not work):</p>
+            <p>Text Alignment(May not work):</p>
             <a href="javascript:void(0)" onclick="changeTextAlignment('left')" class="btn-settings">Left</a>
             <a href="javascript:void(0)" onclick="changeTextAlignment('center')" class="btn-settings">Center</a>
             <a href="javascript:void(0)" onclick="changeTextAlignment('right')" class="btn-settings">Right</a>
         </div>
+
+        <!-- Language Picker -->
+        <div class="settings-option">
+            <p>Language:</p>
+            <a href="javascript:void(0)" onclick="changeLanguage('en')" class="btn-settings">English</a>
+            <a href="javascript:void(0)" onclick="changeLanguage('es')" class="btn-settings">Spanish</a>
+        </div>
     </div>
 
-    <!-- JavaScript for Smooth Scrolling, Settings Panel, Dark Mode, and Font Size -->
+    <!-- JavaScript for Smooth Scrolling, Settings Panel, Dark Mode, Font Size, and Language Picker -->
     <script>
         // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -193,8 +195,49 @@
             localStorage.setItem('textAlign', alignment);
         }
 
-        // Load the saved dark mode, font size, background color, and text alignment settings
+        // Change Language
+        function changeLanguage(language) {
+            const elements = document.querySelectorAll('[data-lang]');
+
+            elements.forEach(el => {
+                const key = el.getAttribute('data-lang');
+                el.textContent = translations[language][key];
+            });
+
+            // Save the selected language in localStorage
+            localStorage.setItem('language', language);
+        }
+
+        // Translations for English and Spanish
+        const translations = {
+            en: {
+                welcome: "Welcome to NexusQ Studios",
+                aboutUs: "About Us",
+                services: "Our Services",
+                minecraft: "Minecraft",
+                roblox: "Roblox",
+                contactUs: "Contact Us",
+                download: "Download",
+                emailUs: "Email Us"
+            },
+            es: {
+                welcome: "Bienvenido a NexusQ Studios",
+                aboutUs: "Sobre Nosotros",
+                services: "Nuestros Servicios",
+                minecraft: "Minecraft",
+                roblox: "Roblox",
+                contactUs: "Contáctanos",
+                download: "Descargar",
+                emailUs: "Envíanos un Correo"
+            }
+        };
+
+        // Load settings on page load
         function loadSettings() {
+            const language = localStorage.getItem('language') || 'en'; // Default to English
+            changeLanguage(language);
+
+            // Load other settings like dark mode, font size, etc.
             const darkMode = localStorage.getItem('darkMode');
             const fontSize = localStorage.getItem('fontSize');
             const backgroundColor = localStorage.getItem('backgroundColor');
@@ -218,7 +261,6 @@
             }
         }
 
-        // Load settings when the page is loaded
         document.addEventListener('DOMContentLoaded', loadSettings);
     </script>
 </body>
