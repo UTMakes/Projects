@@ -443,6 +443,8 @@ footer {
     text-decoration: none;
     border-radius: 8px;
     transition: background-color 0.3s ease;
+        margin: 5px;
+    padding: 8px 16px;
 }
 
 .btn-settings:hover {
