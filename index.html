@@ -111,7 +111,7 @@
         </div>
 
         <div class="settings-option">
-            <p>Text Alignment(May not work):</p>
+            <p>Text Alignment:</p>
             <a href="javascript:void(0)" onclick="changeTextAlignment('left')" class="btn-settings">Left</a>
             <a href="javascript:void(0)" onclick="changeTextAlignment('center')" class="btn-settings">Center</a>
             <a href="javascript:void(0)" onclick="changeTextAlignment('right')" class="btn-settings">Right</a>
@@ -127,7 +127,6 @@
 
     <!-- JavaScript for Smooth Scrolling, Settings Panel, Dark Mode, Font Size, and Language Picker -->
     <script>
-        // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -137,17 +136,14 @@
             });
         });
 
-        // Open settings panel
         function openSettingsPanel() {
             document.getElementById("settingsPanel").style.width = "300px";
         }
 
-        // Close settings panel
         function closeSettingsPanel() {
             document.getElementById("settingsPanel").style.width = "0";
         }
 
-        // Dark mode toggle and persistence with localStorage
         function toggleDarkMode() {
             const body = document.getElementById('body');
             const darkMode = localStorage.getItem('darkMode');
@@ -161,54 +157,33 @@
             }
         }
 
-        // Change Font Size
         function setFontSize(size) {
             const body = document.getElementById('body');
-
-            if (size === 'small') {
-                body.style.fontSize = '14px';
-            } else if (size === 'medium') {
-                body.style.fontSize = '16px';
-            } else if (size === 'large') {
-                body.style.fontSize = '18px';
-            }
-
-            // Save the setting in localStorage
+            body.style.fontSize = size === 'small' ? '14px' : size === 'medium' ? '16px' : '18px';
             localStorage.setItem('fontSize', size);
         }
 
-        // Change Background Color
         function changeBackgroundColor(color) {
             const body = document.getElementById('body');
             body.style.backgroundColor = color;
-
-            // Save the background color preference in localStorage
             localStorage.setItem('backgroundColor', color);
         }
 
-        // Change Text Alignment
         function changeTextAlignment(alignment) {
-            const body = document.getElementById('body');
-            body.style.textAlign = alignment;
-
-            // Save the text alignment preference in localStorage
+            const elements = document.querySelectorAll('p, h2');
+            elements.forEach(el => el.style.textAlign = alignment);
             localStorage.setItem('textAlign', alignment);
         }
 
-        // Change Language
         function changeLanguage(language) {
             const elements = document.querySelectorAll('[data-lang]');
-
             elements.forEach(el => {
                 const key = el.getAttribute('data-lang');
                 el.textContent = translations[language][key];
             });
-
-            // Save the selected language in localStorage
             localStorage.setItem('language', language);
         }
 
-        // Translations for English and Spanish
         const translations = {
             en: {
                 welcome: "Welcome to NexusQ Studios",
@@ -232,33 +207,20 @@
             }
         };
 
-        // Load settings on page load
         function loadSettings() {
-            const language = localStorage.getItem('language') || 'en'; // Default to English
+            const language = localStorage.getItem('language') || 'en';
             changeLanguage(language);
 
-            // Load other settings like dark mode, font size, etc.
             const darkMode = localStorage.getItem('darkMode');
             const fontSize = localStorage.getItem('fontSize');
             const backgroundColor = localStorage.getItem('backgroundColor');
             const textAlign = localStorage.getItem('textAlign');
             const body = document.getElementById('body');
 
-            if (darkMode === 'enabled') {
-                body.classList.add('dark-mode');
-            }
-
-            if (fontSize) {
-                setFontSize(fontSize);
-            }
-
-            if (backgroundColor) {
-                body.style.backgroundColor = backgroundColor;
-            }
-
-            if (textAlign) {
-                body.style.textAlign = textAlign;
-            }
+            if (darkMode === 'enabled') body.classList.add('dark-mode');
+            if (fontSize) setFontSize(fontSize);
+            if (backgroundColor) body.style.backgroundColor = backgroundColor;
+            if (textAlign) changeTextAlignment(textAlign);
         }
 
         document.addEventListener('DOMContentLoaded', loadSettings);
