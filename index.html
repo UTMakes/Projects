@@ -105,9 +105,9 @@
 
         <div class="settings-option">
             <p data-lang="bgColor">Background Color:</p>
-            <a href="javascript:void(0)" onclick="changeBackgroundColor('#ffffff')" class="btn-settings" data-lang="white">White</a>
-            <a href="javascript:void(0)" onclick="changeBackgroundColor('#f4f4f4')" class="btn-settings" data-lang="lightGrey">Light Grey</a>
-            <a href="javascript:void(0)" onclick="changeBackgroundColor('#000000')" class="btn-settings" data-lang="black">Black</a>
+            <a href="javascript:void(0)" onclick="changeBackgroundColor('#ffffff')" class="btn-settings bg-color-button" data-lang="white">White</a>
+            <a href="javascript:void(0)" onclick="changeBackgroundColor('#f4f4f4')" class="btn-settings bg-color-button" data-lang="lightGrey">Light Grey</a>
+            <a href="javascript:void(0)" onclick="changeBackgroundColor('#000000')" class="btn-settings bg-color-button" data-lang="black">Black</a>
         </div>
 
         <div class="settings-option">
@@ -147,13 +147,18 @@
         function toggleDarkMode() {
             const body = document.getElementById('body');
             const darkMode = localStorage.getItem('darkMode');
+            const bgColorButtons = document.querySelectorAll('.bg-color-button');
 
             if (darkMode !== 'enabled') {
                 body.classList.add('dark-mode');
+                body.style.backgroundColor = '#000';  // Automatically set to black in dark mode
                 localStorage.setItem('darkMode', 'enabled');
+                bgColorButtons.forEach(button => button.setAttribute('disabled', true));  // Disable background color options
             } else {
                 body.classList.remove('dark-mode');
+                body.style.backgroundColor = '#fff';  // Automatically set to white when dark mode is disabled
                 localStorage.setItem('darkMode', 'disabled');
+                bgColorButtons.forEach(button => button.removeAttribute('disabled'));  // Enable background color options
             }
         }
 
@@ -165,8 +170,13 @@
 
         function changeBackgroundColor(color) {
             const body = document.getElementById('body');
-            body.style.backgroundColor = color;
-            localStorage.setItem('backgroundColor', color);
+            const darkMode = localStorage.getItem('darkMode');
+
+            // Only allow changing the background color if dark mode is disabled
+            if (darkMode !== 'enabled') {
+                body.style.backgroundColor = color;
+                localStorage.setItem('backgroundColor', color);
+            }
         }
 
         function changeTextAlignment(alignment) {
@@ -282,10 +292,19 @@
             const backgroundColor = localStorage.getItem('backgroundColor');
             const textAlign = localStorage.getItem('textAlign');
             const body = document.getElementById('body');
+            const bgColorButtons = document.querySelectorAll('.bg-color-button');
 
-            if (darkMode === 'enabled') body.classList.add('dark-mode');
+            if (darkMode === 'enabled') {
+                body.classList.add('dark-mode');
+                body.style.backgroundColor = '#000';  // Set background to black when dark mode is enabled
+                bgColorButtons.forEach(button => button.setAttribute('disabled', true));  // Disable background color options
+            } else {
+                body.classList.remove('dark-mode');
+                body.style.backgroundColor = backgroundColor || '#fff';  // Set background to stored color or white
+                bgColorButtons.forEach(button => button.removeAttribute('disabled'));  // Enable background color options
+            }
+
             if (fontSize) setFontSize(fontSize);
-            if (backgroundColor) body.style.backgroundColor = backgroundColor;
             if (textAlign) changeTextAlignment(textAlign);
         }
 
