@@ -1,0 +1,528 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* CSS Variables */
+:root {
+    --primary-color: #333;
+    --secondary-color: #fff;
+    --accent-color: #007bff;
+    --nav-background: rgba(0, 0, 0, 0.1);
+    --nav-hover-background: rgba(0, 0, 0, 0.2);
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+header h1 {
+    text-align: center;
+    margin: 0;
+    padding: 40px 0 20px 0;
+    font-size: 2.5em;
+    color: var(--secondary-color);
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--nav-background);
+    padding: 5px 10px;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header nav ul li a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 0.88em;
+}
+
+header nav ul li a:hover {
+    background-color: var(--nav-hover-background);
+    color: var(--secondary-color);
+}
+
+/* Sections */
+section {
+    padding: 60px 0;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: var(--accent-color);
+}
+
+section p {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #555;
+}
+
+.services-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px;
+    width: 30%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    border: 2px solid var(--accent-color);
+}
+
+.service-item h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: var(--accent-color);
+}
+
+.service-item p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+/* Minecraft Section */
+#minecraft {
+    background-color: #2e8b57;
+    background-image: url('path-to-minecraft-background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#minecraft h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#minecraft p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #f0f0f0;
+}
+
+/* Nexus Client Download Section */
+.nexus-client-download {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.nexus-client-download h3 {
+    font-size: 1.5em;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.nexus-client-download .btn {
+    display: inline-block;
+    padding: 15px 30px;
+    color: #fff;
+    background-color: var(--accent-color);
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s;
+}
+
+.nexus-client-download .btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Roblox Section */
+#roblox {
+    background-color: #ff4757;
+    background-image: url('path-to-roblox-background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#roblox h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#roblox p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #f0f0f0;
+}
+
+#roblox .btn {
+    display: inline-block;
+    padding: 15px 30px;
+    color: var(--secondary-color);
+    background-color: var(--accent-color);
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 20px;
+}
+
+#roblox .btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Contact Section */
+#contact .btn {
+    display: inline-block;
+    padding: 15px 30px;
+    color: var(--secondary-color);
+    background-color: var(--accent-color);
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#contact .btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Download confirmation panel */
+.confirmation-panel {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.confirmation-panel p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.btn-confirm, .btn-cancel {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: var(--accent-color);
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-confirm:hover, .btn-cancel:hover {
+    background-color: #0056b3;
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+        padding: 30px 0 15px 0;
+    }
+
+    header nav ul {
+        top: 5px;
+    }
+
+    .services-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-item {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    #minecraft, #roblox {
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    section {
+        padding: 40px 0;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    .service-item {
+        width: 100%;
+    }
+}
+
+/* Animations */
+.animate-fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+.animate-slide-in {
+    transform: translateX(-100%);
+    animation: slideIn 0.5s forwards;
+}
+
+.animate-slide-up {
+    transform: translateY(20px);
+    opacity: 0;
+    animation: slideUp 0.7s forwards;
+}
+
+.animate-bounce {
+    animation: bounce 1s infinite;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideUp {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+.dark-mode header {
+    background-color: #1a1a1a;
+}
+
+.dark-mode a {
+    color: #f0f0f0;
+}
+
+.dark-mode .service-item {
+    background-color: #222;
+    color: #f0f0f0;
+    border: 2px solid var(--accent-color);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+.dark-mode .service-item:hover {
+    border: 2px solid #0056b3;
+}
+
+.dark-mode .service-item h3 {
+    color: var(--accent-color);
+}
+
+.dark-mode .service-item p {
+    color: #ccc;
+}
+
+.dark-mode #minecraft {
+    background-color: #006400;
+    color: #f0f0f0;
+    background-image: none;
+}
+
+.dark-mode #minecraft h2 {
+    color: #90ee90;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode #minecraft p {
+    color: #dcdcdc;
+}
+
+.dark-mode #roblox {
+    background-color: #8b0000;
+    color: #f0f0f0;
+    background-image: none;
+}
+
+.dark-mode #roblox h2 {
+    color: #ff6347;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode #roblox p {
+    color: #dcdcdc;
+}
+
+.dark-mode #roblox .btn {
+    background-color: #ff6347;
+    color: #f0f0f0;
+}
+
+.dark-mode #roblox .btn:hover {
+    background-color: #ff4500;
+}
+
+/* Settings Panel */
+.settings-panel {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    background-color: #222;
+    color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding: 20px;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.5);
+    border-radius: 10px 0 0 10px;
+}
+
+.settings-panel a.closebtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 36px;
+    text-decoration: none;
+    color: white;
+}
+
+.settings-panel h2 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2em;
+    color: var(--accent-color);
+}
+
+.settings-option {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.settings-option p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #ccc;
+}
+
+.btn-settings {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s;
+}
+
+.btn-settings:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Dark Mode for Settings Panel */
+.dark-mode .settings-panel {
+    background-color: #111;
+    color: white;
+}
+
+.dark-mode .settings-option p {
+    color: #eee;
+}
+
+.dark-mode .btn-settings {
+    background-color: #333;
+}
