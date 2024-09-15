@@ -58,7 +58,8 @@
         </div>
     </section>
 
-    <section id="minecraft" class="animate-fade-in">
+    <!-- Minecraft Section -->
+<section id="minecraft" class="animate-fade-in">
     <div class="container">
         <h2 data-lang="minecraft">Minecraft</h2>
         <p data-lang="minecraftDescription">Explore our Minecraft content and services. We offer custom mod creation and more to enhance your Minecraft experience.</p>
@@ -71,12 +72,18 @@
 
         <!-- Confirmation Panel -->
         <div id="downloadConfirmationPanel" class="confirmation-panel">
-            <p>Are you sure you want to download the Nexus Client 1.21?</p>
-            <a href="path-to-your-file.zip" download="NexusClient1.21.zip" class="btn-confirm">Confirm</a>
-            <a href="javascript:void(0)" class="btn-cancel" onclick="closeDownloadConfirmation()">Cancel</a>
+            <!-- Confirmation Text -->
+            <p data-lang="confirmDownloadText">Are you sure you want to download the Nexus Client 1.21?</p>
+            
+            <!-- Confirm Button -->
+            <a href="path-to-your-file.zip" download="NexusClient1.21.zip" class="btn-confirm" data-lang="confirmButtonText">Confirm</a>
+            
+            <!-- Cancel Button -->
+            <a href="javascript:void(0)" class="btn-cancel" onclick="closeDownloadConfirmation()" data-lang="cancelButtonText">Cancel</a>
         </div>
     </div>
 </section>
+
 
 
     <section id="roblox" class="animate-fade-in">
