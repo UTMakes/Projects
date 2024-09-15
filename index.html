@@ -59,11 +59,25 @@
     </section>
 
     <section id="minecraft" class="animate-fade-in">
-        <div class="container">
-            <h2 data-lang="minecraft">Minecraft</h2>
-            <p data-lang="minecraftDescription">Explore our Minecraft content and services. We offer custom mod creation and more to enhance your Minecraft experience.</p>
+    <div class="container">
+        <h2 data-lang="minecraft">Minecraft</h2>
+        <p data-lang="minecraftDescription">Explore our Minecraft content and services. We offer custom mod creation and more to enhance your Minecraft experience.</p>
+
+        <!-- New Button and Text -->
+        <div class="nexus-client-download">
+            <h3>Nexus Client 1.21</h3>
+            <a href="javascript:void(0)" class="btn" id="downloadButton" data-lang="download" onclick="showDownloadConfirmation()">Download</a>
         </div>
-    </section>
+
+        <!-- Confirmation Panel -->
+        <div id="downloadConfirmationPanel" class="confirmation-panel">
+            <p>Are you sure you want to download the Nexus Client 1.21?</p>
+            <a href="path-to-your-file.zip" download="NexusClient1.21.zip" class="btn-confirm">Confirm</a>
+            <a href="javascript:void(0)" class="btn-cancel" onclick="closeDownloadConfirmation()">Cancel</a>
+        </div>
+    </div>
+</section>
+
 
     <section id="roblox" class="animate-fade-in">
         <div class="container">
@@ -315,6 +329,18 @@
             if (fontSize) setFontSize(fontSize);
             if (textAlign) changeTextAlignment(textAlign);
         }
+        // Show the download confirmation panel
+function showDownloadConfirmation() {
+    const panel = document.getElementById('downloadConfirmationPanel');
+    panel.style.display = 'block';
+}
+
+// Close the download confirmation panel
+function closeDownloadConfirmation() {
+    const panel = document.getElementById('downloadConfirmationPanel');
+    panel.style.display = 'none';
+}
+
 
         document.addEventListener('DOMContentLoaded', loadSettings);
     </script>
