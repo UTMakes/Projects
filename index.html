@@ -76,16 +76,14 @@
             <p data-lang="confirmDownloadText">Are you sure you want to download the Nexus Client 1.21?</p>
             
             <!-- Confirm Button -->
-            <a href="path-to-your-file.zip" download="NexusClient1.21.zip" class="btn-confirm" data-lang="confirmButtonText">Confirm</a>
+            <a href="javascript:void(0)" class="btn-confirm" id="confirmDownload" data-lang="confirmButtonText" onclick="confirmDownload()">Confirm</a>
             
             <!-- Cancel Button -->
             <a href="javascript:void(0)" class="btn-cancel" onclick="closeDownloadConfirmation()" data-lang="cancelButtonText">Cancel</a>
         </div>
     </div>
 </section>
-
-
-
+    
     <section id="roblox" class="animate-fade-in">
         <div class="container">
             <h2 data-lang="roblox">Roblox</h2>
@@ -341,19 +339,38 @@
             if (fontSize) setFontSize(fontSize);
             if (textAlign) changeTextAlignment(textAlign);
         }
-        // Show the download confirmation panel
+       // Function to show the download confirmation panel
 function showDownloadConfirmation() {
     const panel = document.getElementById('downloadConfirmationPanel');
     panel.style.display = 'block';
 }
 
-// Close the download confirmation panel
+// Function to close the download confirmation panel
 function closeDownloadConfirmation() {
     const panel = document.getElementById('downloadConfirmationPanel');
     panel.style.display = 'none';
 }
 
+// Function to confirm download and start downloading the file
+function confirmDownload() {
+    // Set the file URL
+    const fileUrl = 'path-to-your-file.zip';  // Replace this with the actual file path
+    
+    // Create a temporary link element
+    const a = document.createElement('a');
+    a.href = fileUrl;
+    a.download = 'NexusClient1.21.zip';  // Name the file for download
 
+    // Programmatically click the link to trigger the download
+    document.body.appendChild(a);
+    a.click();
+    
+    // Remove the temporary link after the download is triggered
+    document.body.removeChild(a);
+    
+    // Close the confirmation panel
+    closeDownloadConfirmation();
+}
         document.addEventListener('DOMContentLoaded', loadSettings);
     </script>
 </body>
