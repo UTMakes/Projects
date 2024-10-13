@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexusQ Studios</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body id="body">
+    <header>
+        <div class="container">
+            <h1 class="animate-fade-in" data-lang="nexusq">NexusQ Studios</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="animate-slide-in" data-lang="home">Home</a></li>
+                    <li><a href="#about" class="animate-slide-in" data-lang="about">About</a></li>
+                    <li><a href="#services" class="animate-slide-in" data-lang="services">Services</a></li>
+                    <li><a href="#minecraft" class="animate-slide-in" data-lang="minecraft">Minecraft</a></li>
+                    <li><a href="#roblox" class="animate-slide-in" data-lang="roblox">Roblox</a></li>
+                    <li><a href="#contact" class="animate-slide-in" data-lang="contact">Contact</a></li>
+                    <li><a href="javascript:void(0)" onclick="openSettingsPanel()" data-lang="settings">Settings</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="animate-fade-in">
+        <div class="container">
+            <h2 data-lang="welcome">Welcome to NexusQ Studios</h2>
+            <p data-lang="description">We are a creative studio offering innovative solutions for your digital needs.</p>
+        </div>
+    </section>
+
+    <section id="about" class="animate-fade-in">
+        <div class="container">
+            <h2 data-lang="aboutUs">About Us</h2>
+            <p data-lang="aboutDescription">NexusQ Studios is a team of designers and developers dedicated to bringing your ideas to life. We specialize in web development, graphic design, and app promotions.</p>
+        </div>
+    </section>
+
+    <section id="services" class="animate-fade-in">
+        <div class="container">
+            <h2 data-lang="ourServices">Our Services</h2>
+            <div class="services-list">
+                <div class="service-item animate-slide-up">
+                    <h3 data-lang="webDevelopment">Web Development</h3>
+                    <p data-lang="webDescription">Custom websites built with the latest technologies.</p>
+                </div>
+                <div class="service-item animate-slide-up">
+                    <h3 data-lang="graphicDesign">Graphic Design</h3>
+                    <p data-lang="graphicDescription">Designs that capture your brand's essence.</p>
+                </div>
+                <div class="service-item animate-slide-up">
+                    <h3 data-lang="appPromotions">App Promotions</h3>
+                    <p data-lang="appDescription">Strategies to boost your online presence and reach your target audience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Minecraft Section -->
+<section id="minecraft" class="animate-fade-in">
+    <div class="container">
+        <h2 data-lang="minecraft">Minecraft</h2>
+        <p data-lang="minecraftDescription">Explore our Minecraft content and services. We offer custom mod creation and more to enhance your Minecraft experience.</p>
+
+        <!-- New Button and Text -->
+        <div class="nexus-client-download">
+            <h3>Nexus Client 1.21</h3>
+            <a href="javascript:void(0)" class="btn" id="downloadButton" data-lang="download" onclick="showDownloadConfirmation()">Download</a>
+        </div>
+
+        <!-- Confirmation Panel -->
+        <div id="downloadConfirmationPanel" class="confirmation-panel">
+            <!-- Confirmation Text -->
+            <p data-lang="confirmDownloadText">Are you sure you want to download the Nexus Client 1.21?</p>
+            
+            <!-- Confirm Button -->
+            <a href="javascript:void(0)" class="btn-confirm" id="confirmDownload" data-lang="confirmButtonText" onclick="confirmDownload()">Confirm</a>
+            
+            <!-- Cancel Button -->
+            <a href="javascript:void(0)" class="btn-cancel" onclick="closeDownloadConfirmation()" data-lang="cancelButtonText">Cancel</a>
+        </div>
+    </div>
+</section>
+    
+    <section id="roblox" class="animate-fade-in">
+        <div class="container">
+            <h2 data-lang="roblox">Roblox</h2>
+            <p data-lang="robloxDescription">Discover our Roblox community and offerings. We provide custom game development and scripting services.</p>
+            <a href="https://bloxstrap.org" class="btn" download data-lang="download">Download</a>
+        </div>
+    </section>
+
+    <section id="contact" class="animate-fade-in">
+        <div class="container">
+            <h2 data-lang="contactUs">Contact Us</h2>
+            <a href="mailto:info@nexusqstudios.com" class="btn animate-bounce" data-lang="emailUs">Email Us</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p data-lang="footerText">&copy; 2024 NexusQ Studios. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Settings Panel -->
+    <div id="settingsPanel" class="settings-panel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeSettingsPanel()">&times;</a>
+        <h2 data-lang="settings">Settings</h2>
+        
+        <div class="settings-option">
+            <p data-lang="darkMode">Dark Mode:</p>
+            <a href="javascript:void(0)" onclick="toggleDarkMode()" class="btn-settings" data-lang="enable">Enable</a>
+        </div>
+
+        <div class="settings-option">
+            <p data-lang="fontSize">Font Size:</p>
+            <a href="javascript:void(0)" onclick="setFontSize('small')" class="btn-settings" data-lang="small">Small</a>
+            <a href="javascript:void(0)" onclick="setFontSize('medium')" class="btn-settings" data-lang="medium">Medium</a>
+            <a href="javascript:void(0)" onclick="setFontSize('large')" class="btn-settings" data-lang="large">Large</a>
+        </div>
+
+        <div class="settings-option">
+            <p data-lang="bgColor">Background Color:</p>
+            <a href="javascript:void(0)" onclick="changeBackgroundColor('#ffffff')" class="btn-settings bg-color-button" data-lang="white">White</a>
+            <a href="javascript:void(0)" onclick="changeBackgroundColor('#f4f4f4')" class="btn-settings bg-color-button" data-lang="lightGrey">Light Grey</a>
+            <a href="javascript:void(0)" onclick="changeBackgroundColor('#000000')" class="btn-settings bg-color-button" data-lang="black">Black</a>
+            <!-- Message to display when dark mode is active -->
+            <p id="darkModeMessage" class="small-text"></p>
+        </div>
+
+        <div class="settings-option">
+            <p data-lang="textAlign">Text Alignment:</p>
+            <a href="javascript:void(0)" onclick="changeTextAlignment('left')" class="btn-settings" data-lang="left">Left</a>
+            <a href="javascript:void(0)" onclick="changeTextAlignment('center')" class="btn-settings" data-lang="center">Center</a>
+            <a href="javascript:void(0)" onclick="changeTextAlignment('right')" class="btn-settings" data-lang="right">Right</a>
+        </div>
+
+        <!-- Language Picker -->
+        <div class="settings-option">
+            <p data-lang="language">Language:</p>
+            <a href="javascript:void(0)" onclick="changeLanguage('en')" class="btn-settings" data-lang="english">English</a>
+            <a href="javascript:void(0)" onclick="changeLanguage('es')" class="btn-settings" data-lang="spanish">Spanish</a>
+            <a href="javascript:void(0)" onclick="changeLanguage('chi')" class="btn-settings" data-lang="spanish">Chinese</a>
+        </div>
+    </div>
+
+    <!-- JavaScript for Smooth Scrolling, Settings Panel, Dark Mode, Font Size, and Language Picker -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        function openSettingsPanel() {
+            document.getElementById("settingsPanel").style.width = "300px";
+        }
+
+        function closeSettingsPanel() {
+            document.getElementById("settingsPanel").style.width = "0";
+        }
+
+        function toggleDarkMode() {
+            const body = document.getElementById('body');
+            const darkMode = localStorage.getItem('darkMode');
+            const bgColorButtons = document.querySelectorAll('.bg-color-button');
+            const darkModeMessage = document.getElementById('darkModeMessage');
+
+            if (darkMode !== 'enabled') {
+                body.classList.add('dark-mode');
+                body.style.backgroundColor = '#000';  // Automatically set to black in dark mode
+                localStorage.setItem('darkMode', 'enabled');
+                bgColorButtons.forEach(button => button.setAttribute('disabled', true));  // Disable background color options
+                darkModeMessage.textContent = "Disabled in dark mode";  // Display the message
+            } else {
+                body.classList.remove('dark-mode');
+                body.style.backgroundColor = '#fff';  // Automatically set to white when dark mode is disabled
+                localStorage.setItem('darkMode', 'disabled');
+                bgColorButtons.forEach(button => button.removeAttribute('disabled'));  // Enable background color options
+                darkModeMessage.textContent = "";  // Clear the message
+            }
+        }
+
+        function setFontSize(size) {
+            const body = document.getElementById('body');
+            body.style.fontSize = size === 'small' ? '14px' : size === 'medium' ? '16px' : '18px';
+            localStorage.setItem('fontSize', size);
+        }
+
+        function changeBackgroundColor(color) {
+            const body = document.getElementById('body');
+            const darkMode = localStorage.getItem('darkMode');
+
+            // Only allow changing the background color if dark mode is disabled
+            if (darkMode !== 'enabled') {
+                body.style.backgroundColor = color;
+                localStorage.setItem('backgroundColor', color);
+            }
+        }
+
+        function changeTextAlignment(alignment) {
+            const elements = document.querySelectorAll('p, h2');
+            elements.forEach(el => el.style.textAlign = alignment);
+            localStorage.setItem('textAlign', alignment);
+        }
+
+        function changeLanguage(language) {
+            const elements = document.querySelectorAll('[data-lang]');
+            elements.forEach(el => {
+                const key = el.getAttribute('data-lang');
+                el.textContent = translations[language][key];
+            });
+            localStorage.setItem('language', language);
+        }
+
+        const translations = {
+    en: {
+        nexusq: "NexusQ Studios",
+        home: "Home",
+        about: "About",
+        services: "Services",
+        minecraft: "Minecraft",
+        roblox: "Roblox",
+        contact: "Contact",
+        settings: "Settings",
+        welcome: "Welcome to NexusQ Studios",
+        description: "We are a creative studio offering innovative solutions for your digital needs.",
+        aboutUs: "About Us",
+        aboutDescription: "NexusQ Studios is a team of designers and developers dedicated to bringing your ideas to life.",
+        ourServices: "Our Services",
+        webDevelopment: "Web Development",
+        webDescription: "Custom websites built with the latest technologies.",
+        graphicDesign: "Graphic Design",
+        graphicDescription: "Designs that capture your brand's essence.",
+        appPromotions: "App Promotions",
+        appDescription: "Strategies to boost your online presence and reach your target audience.",
+        minecraftDescription: "Explore our Minecraft content and services.",
+        robloxDescription: "Discover our Roblox community and offerings.",
+        download: "Download",
+        contactUs: "Contact Us",
+        emailUs: "Email Us",
+        footerText: "&copy; 2024 NexusQ Studios. All rights reserved.",
+        darkMode: "Dark Mode:",
+        fontSize: "Font Size:",
+        bgColor: "Background Color:",
+        textAlign: "Text Alignment:",
+        white: "White",
+        lightGrey: "Light Grey",
+        black: "Black",
+        small: "Small",
+        medium: "Medium",
+        large: "Large",
+        left: "Left",
+        center: "Center",
+        right: "Right",
+        language: "Language:",
+        english: "English",
+        spanish: "Spanish",
+        confirmDownloadText: "Are you sure you want to download the Nexus Client 1.21?",
+        confirmButtonText: "Confirm",
+        cancelButtonText: "Cancel"
+    },
+    es: {
+        nexusq: "NexusQ Studios",
+        home: "Inicio",
+        about: "Sobre Nosotros",
+        services: "Servicios",
+        minecraft: "Minecraft",
+        roblox: "Roblox",
+        contact: "Contacto",
+        settings: "Configuración",
+        welcome: "Bienvenido a NexusQ Studios",
+        description: "Somos un estudio creativo que ofrece soluciones innovadoras para tus necesidades digitales.",
+        aboutUs: "Sobre Nosotros",
+        aboutDescription: "NexusQ Studios es un equipo de diseñadores y desarrolladores dedicados a hacer realidad tus ideas.",
+        ourServices: "Nuestros Servicios",
+        webDevelopment: "Desarrollo Web",
+        webDescription: "Sitios web personalizados con las últimas tecnologías.",
+        graphicDesign: "Diseño Gráfico",
+        graphicDescription: "Diseños que capturan la esencia de tu marca.",
+        appPromotions: "Promoción de Apps",
+        appDescription: "Estrategias para aumentar tu presencia en línea.",
+        minecraftDescription: "Explora nuestro contenido y servicios de Minecraft.",
+        robloxDescription: "Descubre nuestra comunidad y servicios de Roblox.",
+        download: "Descargar",
+        contactUs: "Contáctanos",
+        emailUs: "Envíanos un Correo",
+        footerText: "&copy; 2024 NexusQ Studios. Todos los derechos reservados.",
+        darkMode: "Modo Oscuro:",
+        fontSize: "Tamaño de Fuente:",
+        bgColor: "Color de Fondo:",
+        textAlign: "Alineación del Texto:",
+        white: "Blanco",
+        lightGrey: "Gris Claro",
+        black: "Negro",
+        small: "Pequeño",
+        medium: "Medio",
+        large: "Grande",
+        left: "Izquierda",
+        center: "Centro",
+        right: "Derecha",
+        language: "Idioma:",
+        english: "Inglés",
+        spanish: "Español",
+        confirmDownloadText: "¿Estás seguro de que deseas descargar Nexus Client 1.21?",
+        confirmButtonText: "Confirmar",
+        cancelButtonText: "Cancelar"
+    },        
+    chi: {
+        nexusq: "NexusQ Studios",
+        home: "开头",
+        about: "关于我们",
+        services: "服务",
+        minecraft: "Minecraft",
+        roblox: "Roblox",
+        contact: "接触",
+        settings: "配置",
+        welcome: "欢迎来到 NexusQ Studios",
+        description: "我们是一家创意工作室，为您的数字需求提供创新解决方案.",
+        aboutUs: "关于我们",
+        aboutDescription: "NexusQ Studios 是一个由设计师和开发人员组成的团队，致力于将您的想法变为现实.",
+        ourServices: "我们的服务",
+        webDevelopment: "网页开发",
+        webDescription: "采用最新技术的定制网站.",
+        graphicDesign: "平面设计",
+        graphicDescription: "捕捉您品牌精髓的设计.",
+        appPromotions: "应用推广",
+        appDescription: "提高在线影响力的策略.",
+        minecraftDescription: "探索我们的 Minecraft 内容和服务.",
+        robloxDescription: "探索我们的 Roblox 社区和服务.",
+        download: "释放",
+        contactUs: "联系我们",
+        emailUs: "给我们发电子邮件",
+        footerText: "＆复制; 2024 年 NexusQ 工作室。版权所有.",
+        darkMode: "深色模式",
+        fontSize: "字体大小：",
+        bgColor: "背景颜色：",
+        textAlign: "文本对齐方式：",
+        white: "白色的",
+        lightGrey: "浅灰色",
+        black: "黑色的",
+        small: "小的",
+        medium: "一半",
+        large: "大的",
+        left: "左边",
+        center: "中心",
+        right: "正确的",
+        language: "语言：",
+        english: "英语",
+        spanish: "西班牙语",
+        confirmDownloadText: "您确定要下载 Nexus 客户端 1.21 吗?",
+        confirmButtonText: "确认",
+        cancelButtonText: "取消"
+    }
+};
+        function loadSettings() {
+            const language = localStorage.getItem('language') || 'en';
+            changeLanguage(language);
+
+            const darkMode = localStorage.getItem('darkMode');
+            const fontSize = localStorage.getItem('fontSize');
+            const backgroundColor = localStorage.getItem('backgroundColor');
+            const textAlign = localStorage.getItem('textAlign');
+            const body = document.getElementById('body');
+            const bgColorButtons = document.querySelectorAll('.bg-color-button');
+            const darkModeMessage = document.getElementById('darkModeMessage');
+
+            if (darkMode === 'enabled') {
+                body.classList.add('dark-mode');
+                body.style.backgroundColor = '#000';  // Set background to black when dark mode is enabled
+                bgColorButtons.forEach(button => button.setAttribute('disabled', true));  // Disable background color options
+                darkModeMessage.textContent = "Disabled in dark mode";  // Display the message
+            } else {
+                body.classList.remove('dark-mode');
+                body.style.backgroundColor = backgroundColor || '#fff';  // Set background to stored color or white
+                bgColorButtons.forEach(button => button.removeAttribute('disabled'));  // Enable background color options
+                darkModeMessage.textContent = "";  // Clear the message
+            }
+
+            if (fontSize) setFontSize(fontSize);
+            if (textAlign) changeTextAlignment(textAlign);
+        }
+       // Function to show the download confirmation panel
+function showDownloadConfirmation() {
+    const panel = document.getElementById('downloadConfirmationPanel');
+    panel.style.display = 'block';
+}
+
+// Function to close the download confirmation panel
+function closeDownloadConfirmation() {
+    const panel = document.getElementById('downloadConfirmationPanel');
+    panel.style.display = 'none';
+}
+
+function confirmDownload() {
+    // Set the GitHub Pages URL for the file
+    const fileUrl = 'https://utmakes.github.io/Projects/downloads/NexusClient1.21.zip';  // Replace with your actual file path
+    
+    // Create a temporary link element
+    const a = document.createElement('a');
+    a.href = fileUrl;
+    a.download = 'NexusClient1.21.zip';  // Name the file for download
+
+    // Programmatically click the link to trigger the download
+    document.body.appendChild(a);
+    a.click();
+    
+    // Remove the temporary link after the download is triggered
+    document.body.removeChild(a);
+    
+    // Close the confirmation panel
+    closeDownloadConfirmation();
+}
+        document.addEventListener('DOMContentLoaded', loadSettings);
+    </script>
+</body>
+</html>
