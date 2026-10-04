@@ -174,13 +174,13 @@
 
             if (darkMode !== 'enabled') {
                 body.classList.add('dark-mode');
-                body.style.backgroundColor = '#000';  // Automatically set to black in dark mode
+                body.style.backgroundColor = '#0d0d0d';  // Automatically set to dark theme bg
                 localStorage.setItem('darkMode', 'enabled');
                 bgColorButtons.forEach(button => button.setAttribute('disabled', true));  // Disable background color options
                 darkModeMessage.textContent = "Disabled in dark mode";  // Display the message
             } else {
                 body.classList.remove('dark-mode');
-                body.style.backgroundColor = '#fff';  // Automatically set to white when dark mode is disabled
+                body.style.backgroundColor = '#f4f4f4';  // Restore light mode default
                 localStorage.setItem('darkMode', 'disabled');
                 bgColorButtons.forEach(button => button.removeAttribute('disabled'));  // Enable background color options
                 darkModeMessage.textContent = "";  // Clear the message
@@ -373,12 +373,12 @@
 
             if (darkMode === 'enabled') {
                 body.classList.add('dark-mode');
-                body.style.backgroundColor = '#000';  // Set background to black when dark mode is enabled
+                body.style.backgroundColor = '#0d0d0d';  // Set to dark theme bg
                 bgColorButtons.forEach(button => button.setAttribute('disabled', true));  // Disable background color options
                 darkModeMessage.textContent = "Disabled in dark mode";  // Display the message
             } else {
                 body.classList.remove('dark-mode');
-                body.style.backgroundColor = backgroundColor || '#fff';  // Set background to stored color or white
+                body.style.backgroundColor = backgroundColor || '#f4f4f4';  // Restore light mode default
                 bgColorButtons.forEach(button => button.removeAttribute('disabled'));  // Enable background color options
                 darkModeMessage.textContent = "";  // Clear the message
             }

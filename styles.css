@@ -266,7 +266,8 @@ section p {
     margin-bottom: 20px;
 }
 
-.btn-confirm, .btn-cancel {
+.btn-confirm,
+.btn-cancel {
     display: inline-block;
     padding: 10px 20px;
     color: #fff;
@@ -277,7 +278,8 @@ section p {
     transition: background-color 0.3s ease;
 }
 
-.btn-confirm:hover, .btn-cancel:hover {
+.btn-confirm:hover,
+.btn-cancel:hover {
     background-color: #0056b3;
 }
 
@@ -312,7 +314,8 @@ footer {
         margin-bottom: 20px;
     }
 
-    #minecraft, #roblox {
+    #minecraft,
+    #roblox {
         padding: 60px 0;
     }
 }
@@ -372,87 +375,227 @@ footer {
 }
 
 @keyframes bounce {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-10px);
     }
 }
 
-/* Dark Mode Styles */
+/* ===========================
+   DARK MODE
+   =========================== */
+
 .dark-mode {
-    background-color: #121212;
-    color: #f0f0f0;
+    --dm-bg: #0d0d0d;
+    --dm-surface: #161618;
+    --dm-surface-raised: #1e1e22;
+    --dm-border: rgba(255, 255, 255, 0.06);
+    --dm-text: #e8e8ec;
+    --dm-text-muted: #9a9aab;
+    --dm-accent: #4dabf7;
+    --dm-accent-glow: rgba(77, 171, 247, 0.25);
+    --dm-accent-hover: #74c0fc;
+
+    background-color: var(--dm-bg);
+    color: var(--dm-text);
 }
 
-.dark-mode header {
-    background-color: #1a1a1a;
-}
-
+/* ---- Global Overrides ---- */
 .dark-mode a {
-    color: #f0f0f0;
+    color: var(--dm-accent);
+    transition: color 0.3s ease;
 }
 
+.dark-mode a:hover {
+    color: var(--dm-accent-hover);
+}
+
+.dark-mode section h2 {
+    color: var(--dm-accent);
+    text-shadow: 0 0 20px var(--dm-accent-glow);
+}
+
+.dark-mode section p {
+    color: var(--dm-text-muted);
+}
+
+/* ---- Header ---- */
+.dark-mode header {
+    background: linear-gradient(135deg, #101014 0%, #1a1a2e 100%);
+    border: 1px solid var(--dm-border);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.dark-mode header h1 {
+    color: #f0f0f5;
+    text-shadow: 0 0 30px rgba(77, 171, 247, 0.15);
+}
+
+.dark-mode header nav ul {
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dark-mode header nav ul li a {
+    color: #c8c8d4;
+}
+
+.dark-mode header nav ul li a:hover {
+    color: #fff;
+    background-color: rgba(77, 171, 247, 0.15);
+}
+
+/* ---- Service Cards (Glassmorphism) ---- */
 .dark-mode .service-item {
-    background-color: #222;
-    color: #f0f0f0;
-    border: 2px solid var(--accent-color);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+    background: linear-gradient(145deg, rgba(30, 30, 36, 0.8), rgba(22, 22, 26, 0.95));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--dm-border);
+    color: var(--dm-text);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
 }
 
 .dark-mode .service-item:hover {
-    border: 2px solid #0056b3;
+    transform: translateY(-8px);
+    border: 1px solid var(--dm-accent);
+    box-shadow:
+        0 12px 40px rgba(0, 0, 0, 0.5),
+        0 0 20px var(--dm-accent-glow);
 }
 
 .dark-mode .service-item h3 {
-    color: var(--accent-color);
+    color: var(--dm-accent);
 }
 
 .dark-mode .service-item p {
-    color: #ccc;
+    color: var(--dm-text-muted);
 }
 
+/* ---- Minecraft Section ---- */
 .dark-mode #minecraft {
-    background-color: #006400;
-    color: #f0f0f0;
+    background: linear-gradient(160deg, #0a2e1a 0%, #0d4a28 50%, #0a2e1a 100%);
     background-image: none;
+    color: var(--dm-text);
+    border: 1px solid rgba(76, 175, 80, 0.15);
+    box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.4);
 }
 
 .dark-mode #minecraft h2 {
-    color: #90ee90;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: #66bb6a;
+    text-shadow: 0 0 24px rgba(102, 187, 106, 0.35), 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .dark-mode #minecraft p {
-    color: #dcdcdc;
+    color: #b8d8ba;
 }
 
+.dark-mode .nexus-client-download h3 {
+    color: #a5d6a7;
+}
+
+.dark-mode .nexus-client-download .btn {
+    background: linear-gradient(135deg, #2e7d32, #43a047);
+    color: #fff;
+    border: 1px solid rgba(102, 187, 106, 0.2);
+    box-shadow: 0 4px 16px rgba(46, 125, 50, 0.3);
+}
+
+.dark-mode .nexus-client-download .btn:hover {
+    background: linear-gradient(135deg, #43a047, #66bb6a);
+    box-shadow: 0 6px 24px rgba(76, 175, 80, 0.45);
+}
+
+/* ---- Roblox Section ---- */
 .dark-mode #roblox {
-    background-color: #8b0000;
-    color: #f0f0f0;
+    background: linear-gradient(160deg, #2a0a0a 0%, #4a1010 50%, #2a0a0a 100%);
     background-image: none;
+    color: var(--dm-text);
+    border: 1px solid rgba(244, 67, 54, 0.15);
+    box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.4);
 }
 
 .dark-mode #roblox h2 {
-    color: #ff6347;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: #ef5350;
+    text-shadow: 0 0 24px rgba(239, 83, 80, 0.35), 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .dark-mode #roblox p {
-    color: #dcdcdc;
+    color: #e0b0b0;
 }
 
 .dark-mode #roblox .btn {
-    background-color: #ff6347;
-    color: #f0f0f0;
+    background: linear-gradient(135deg, #c62828, #e53935);
+    color: #fff;
+    border: 1px solid rgba(239, 83, 80, 0.2);
+    box-shadow: 0 4px 16px rgba(198, 40, 40, 0.3);
 }
 
 .dark-mode #roblox .btn:hover {
-    background-color: #ff4500;
+    background: linear-gradient(135deg, #e53935, #ef5350);
+    box-shadow: 0 6px 24px rgba(244, 67, 54, 0.45);
 }
 
-/* Settings Panel */
+/* ---- Contact Section ---- */
+.dark-mode #contact .btn {
+    background: linear-gradient(135deg, var(--dm-accent), #228be6);
+    color: #fff;
+    border: 1px solid rgba(77, 171, 247, 0.2);
+    box-shadow: 0 4px 16px var(--dm-accent-glow);
+}
+
+.dark-mode #contact .btn:hover {
+    background: linear-gradient(135deg, #228be6, var(--dm-accent-hover));
+    box-shadow: 0 6px 24px rgba(77, 171, 247, 0.4);
+}
+
+/* ---- Confirmation Panel ---- */
+.dark-mode .confirmation-panel {
+    background: var(--dm-surface-raised);
+    border: 1px solid var(--dm-border);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .confirmation-panel p {
+    color: var(--dm-text);
+}
+
+.dark-mode .btn-confirm {
+    background: linear-gradient(135deg, #2e7d32, #43a047);
+    box-shadow: 0 4px 12px rgba(46, 125, 50, 0.3);
+}
+
+.dark-mode .btn-confirm:hover {
+    background: linear-gradient(135deg, #43a047, #66bb6a);
+}
+
+.dark-mode .btn-cancel {
+    background: linear-gradient(135deg, #c62828, #e53935);
+    box-shadow: 0 4px 12px rgba(198, 40, 40, 0.3);
+}
+
+.dark-mode .btn-cancel:hover {
+    background: linear-gradient(135deg, #e53935, #ef5350);
+}
+
+/* ---- Footer ---- */
+.dark-mode footer {
+    background: linear-gradient(135deg, #101014, #1a1a2e);
+    border: 1px solid var(--dm-border);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+    color: var(--dm-text-muted);
+}
+
+/* ===========================
+   SETTINGS PANEL
+   =========================== */
 .settings-panel {
     height: 100%;
     width: 0;
@@ -463,7 +606,8 @@ footer {
     background-color: #222;
     color: white;
     overflow-x: hidden;
-    transition: 0.5s;
+    overflow-y: auto;
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     padding: 20px;
     box-shadow: -2px 0 8px rgba(0, 0, 0, 0.5);
     border-radius: 10px 0 0 10px;
@@ -476,6 +620,12 @@ footer {
     font-size: 36px;
     text-decoration: none;
     color: white;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.settings-panel a.closebtn:hover {
+    color: #ff6b6b;
+    transform: rotate(90deg);
 }
 
 .settings-panel h2 {
@@ -504,7 +654,7 @@ footer {
     color: white;
     text-decoration: none;
     border-radius: 8px;
-    transition: background-color 0.3s ease, transform 0.3s;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .btn-settings:hover {
@@ -513,16 +663,32 @@ footer {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Dark Mode for Settings Panel */
+/* ---- Dark Mode Settings Panel ---- */
 .dark-mode .settings-panel {
-    background-color: #111;
-    color: white;
+    background: linear-gradient(180deg, #0d0d10 0%, #13131a 100%);
+    border-left: 1px solid var(--dm-border);
+    box-shadow: -8px 0 40px rgba(0, 0, 0, 0.7);
+}
+
+.dark-mode .settings-panel h2 {
+    color: var(--dm-accent);
+    text-shadow: 0 0 16px var(--dm-accent-glow);
 }
 
 .dark-mode .settings-option p {
-    color: #eee;
+    color: var(--dm-text-muted);
 }
 
 .dark-mode .btn-settings {
-    background-color: #333;
+    background: var(--dm-surface-raised);
+    border: 1px solid var(--dm-border);
+    color: var(--dm-text);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .btn-settings:hover {
+    background: var(--dm-accent);
+    color: #fff;
+    border-color: var(--dm-accent);
+    box-shadow: 0 4px 16px var(--dm-accent-glow);
 }
