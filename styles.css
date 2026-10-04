@@ -1,0 +1,861 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* CSS Variables */
+:root {
+    --primary-color: #333;
+    --secondary-color: #fff;
+    --accent-color: #007bff;
+    --nav-background: rgba(0, 0, 0, 0.1);
+    --nav-hover-background: rgba(0, 0, 0, 0.2);
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 15px;
+}
+
+header h1 {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-size: 2.5em;
+    color: var(--secondary-color);
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    list-style: none;
+    background-color: var(--nav-background);
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: fit-content;
+}
+
+header nav ul li a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 0.88em;
+}
+
+header nav ul li a:hover {
+    background-color: var(--nav-hover-background);
+    color: var(--secondary-color);
+}
+
+/* Sections */
+section {
+    padding: 60px 0;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: var(--accent-color);
+}
+
+section p {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #555;
+}
+
+.services-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px;
+    width: 30%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    border: 2px solid var(--accent-color);
+}
+
+.service-item h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: var(--accent-color);
+}
+
+.service-item p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+/* Minecraft Section */
+#minecraft {
+    background-color: #2e8b57;
+    background-image: url('path-to-minecraft-background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#minecraft h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#minecraft p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #f0f0f0;
+}
+
+/* Nexus Client Download Section */
+.nexus-client-download {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.nexus-client-download h3 {
+    font-size: 1.5em;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.nexus-client-download .btn {
+    display: inline-block;
+    padding: 15px 30px;
+    color: #fff;
+    background-color: var(--accent-color);
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s;
+}
+
+.nexus-client-download .btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Roblox Section */
+#roblox {
+    background-color: #ff4757;
+    background-image: url('path-to-roblox-background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#roblox h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#roblox p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #f0f0f0;
+}
+
+#roblox .btn {
+    display: inline-block;
+    padding: 15px 30px;
+    color: var(--secondary-color);
+    background-color: var(--accent-color);
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 20px;
+}
+
+#roblox .btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Contact Section */
+#contact .btn {
+    display: inline-block;
+    padding: 15px 30px;
+    color: var(--secondary-color);
+    background-color: var(--accent-color);
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#contact .btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Download confirmation panel */
+.confirmation-panel {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.confirmation-panel p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.btn-confirm,
+.btn-cancel {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: var(--accent-color);
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-confirm:hover,
+.btn-cancel:hover {
+    background-color: #0056b3;
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+        padding: 30px 0 15px 0;
+    }
+
+    header nav ul {
+        top: 5px;
+    }
+
+    .services-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-item {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    #minecraft,
+    #roblox {
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    section {
+        padding: 40px 0;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    .service-item {
+        width: 100%;
+    }
+}
+
+/* Animations */
+.animate-fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+.animate-slide-in {
+    transform: translateX(-100%);
+    animation: slideIn 0.5s forwards;
+}
+
+.animate-slide-up {
+    transform: translateY(20px);
+    opacity: 0;
+    animation: slideUp 0.7s forwards;
+}
+
+.animate-bounce {
+    animation: bounce 1s infinite;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideUp {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* ===========================
+   MERGED STYLES (Projects, Skills, About, Contact)
+   =========================== */
+.about-content {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+.about-text {
+    flex: 1;
+    min-width: 300px;
+}
+.about-text p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.projects-grid, .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+.project-card, .skill {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s, border 0.3s;
+    text-align: center;
+    border: 2px solid transparent; /* Prevents layout shift on hover */
+}
+.project-card:hover, .skill:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    border: 2px solid var(--accent-color);
+}
+
+.project-info {
+    padding: 20px;
+    text-align: center;
+}
+.project-info h3, .skill h3 {
+    margin-bottom: 10px;
+    color: var(--accent-color);
+}
+.project-info p, .skill p {
+    margin-bottom: 15px;
+    color: #666;
+}
+.project-info a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+.skill {
+    padding: 30px 20px;
+}
+.skill i {
+    font-size: 2.5em;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start;
+}
+.contact-content form {
+    flex: 1;
+    min-width: 300px;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    font-size: 1em;
+    font-family: inherit;
+}
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+.contact-info p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    color: #555;
+    text-align: left;
+}
+.contact-info i {
+    color: var(--accent-color);
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+.social-links {
+    margin-top: 20px;
+}
+.social-links a {
+    color: var(--accent-color);
+    font-size: 1.5em;
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+.social-links a:hover {
+    color: #0056b3;
+}
+
+/* ===========================
+   DARK MODE
+   =========================== */
+
+.dark-mode {
+    --dm-bg: #0d0d0d;
+    --dm-surface: #161618;
+    --dm-surface-raised: #1e1e22;
+    --dm-border: rgba(255, 255, 255, 0.06);
+    --dm-text: #e8e8ec;
+    --dm-text-muted: #9a9aab;
+    --dm-accent: #4dabf7;
+    --dm-accent-glow: rgba(77, 171, 247, 0.25);
+    --dm-accent-hover: #74c0fc;
+
+    background-color: var(--dm-bg);
+    color: var(--dm-text);
+}
+
+/* ---- Global Overrides ---- */
+.dark-mode a {
+    color: var(--dm-accent);
+    transition: color 0.3s ease;
+}
+
+.dark-mode a:hover {
+    color: var(--dm-accent-hover);
+}
+
+.dark-mode section h2 {
+    color: var(--dm-accent);
+    text-shadow: 0 0 20px var(--dm-accent-glow);
+}
+
+.dark-mode section p {
+    color: var(--dm-text-muted);
+}
+
+/* ---- Header ---- */
+.dark-mode header {
+    background: linear-gradient(135deg, #101014 0%, #1a1a2e 100%);
+    border: 1px solid var(--dm-border);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.dark-mode header h1 {
+    color: #f0f0f5;
+    text-shadow: 0 0 30px rgba(77, 171, 247, 0.15);
+}
+
+.dark-mode header nav ul {
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dark-mode header nav ul li a {
+    color: #c8c8d4;
+}
+
+.dark-mode header nav ul li a:hover {
+    color: #fff;
+    background-color: rgba(77, 171, 247, 0.15);
+}
+
+/* ---- Service Cards (Glassmorphism) ---- */
+.dark-mode .service-item {
+    background: linear-gradient(145deg, rgba(30, 30, 36, 0.8), rgba(22, 22, 26, 0.95));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--dm-border);
+    color: var(--dm-text);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.dark-mode .service-item:hover {
+    transform: translateY(-8px);
+    border: 1px solid var(--dm-accent);
+    box-shadow:
+        0 12px 40px rgba(0, 0, 0, 0.5),
+        0 0 20px var(--dm-accent-glow);
+}
+
+.dark-mode .service-item h3 {
+    color: var(--dm-accent);
+}
+
+.dark-mode .service-item p {
+    color: var(--dm-text-muted);
+}
+
+/* ---- Minecraft Section ---- */
+.dark-mode #minecraft {
+    background: linear-gradient(160deg, #0a2e1a 0%, #0d4a28 50%, #0a2e1a 100%);
+    background-image: none;
+    color: var(--dm-text);
+    border: 1px solid rgba(76, 175, 80, 0.15);
+    box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode #minecraft h2 {
+    color: #66bb6a;
+    text-shadow: 0 0 24px rgba(102, 187, 106, 0.35), 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode #minecraft p {
+    color: #b8d8ba;
+}
+
+.dark-mode .nexus-client-download h3 {
+    color: #a5d6a7;
+}
+
+.dark-mode .nexus-client-download .btn {
+    background: linear-gradient(135deg, #2e7d32, #43a047);
+    color: #fff;
+    border: 1px solid rgba(102, 187, 106, 0.2);
+    box-shadow: 0 4px 16px rgba(46, 125, 50, 0.3);
+}
+
+.dark-mode .nexus-client-download .btn:hover {
+    background: linear-gradient(135deg, #43a047, #66bb6a);
+    box-shadow: 0 6px 24px rgba(76, 175, 80, 0.45);
+}
+
+/* ---- Roblox Section ---- */
+.dark-mode #roblox {
+    background: linear-gradient(160deg, #2a0a0a 0%, #4a1010 50%, #2a0a0a 100%);
+    background-image: none;
+    color: var(--dm-text);
+    border: 1px solid rgba(244, 67, 54, 0.15);
+    box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode #roblox h2 {
+    color: #ef5350;
+    text-shadow: 0 0 24px rgba(239, 83, 80, 0.35), 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode #roblox p {
+    color: #e0b0b0;
+}
+
+.dark-mode #roblox .btn {
+    background: linear-gradient(135deg, #c62828, #e53935);
+    color: #fff;
+    border: 1px solid rgba(239, 83, 80, 0.2);
+    box-shadow: 0 4px 16px rgba(198, 40, 40, 0.3);
+}
+
+.dark-mode #roblox .btn:hover {
+    background: linear-gradient(135deg, #e53935, #ef5350);
+    box-shadow: 0 6px 24px rgba(244, 67, 54, 0.45);
+}
+
+/* ---- Contact Section ---- */
+.dark-mode #contact .btn {
+    background: linear-gradient(135deg, var(--dm-accent), #228be6);
+    color: #fff;
+    border: 1px solid rgba(77, 171, 247, 0.2);
+    box-shadow: 0 4px 16px var(--dm-accent-glow);
+}
+
+.dark-mode #contact .btn:hover {
+    background: linear-gradient(135deg, #228be6, var(--dm-accent-hover));
+    box-shadow: 0 6px 24px rgba(77, 171, 247, 0.4);
+}
+
+/* ---- Confirmation Panel ---- */
+.dark-mode .confirmation-panel {
+    background: var(--dm-surface-raised);
+    border: 1px solid var(--dm-border);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .confirmation-panel p {
+    color: var(--dm-text);
+}
+
+.dark-mode .btn-confirm {
+    background: linear-gradient(135deg, #2e7d32, #43a047);
+    box-shadow: 0 4px 12px rgba(46, 125, 50, 0.3);
+}
+
+.dark-mode .btn-confirm:hover {
+    background: linear-gradient(135deg, #43a047, #66bb6a);
+}
+
+.dark-mode .btn-cancel {
+    background: linear-gradient(135deg, #c62828, #e53935);
+    box-shadow: 0 4px 12px rgba(198, 40, 40, 0.3);
+}
+
+.dark-mode .btn-cancel:hover {
+    background: linear-gradient(135deg, #e53935, #ef5350);
+}
+
+/* ---- Footer ---- */
+.dark-mode footer {
+    background: linear-gradient(135deg, #101014, #1a1a2e);
+    border: 1px solid var(--dm-border);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+    color: var(--dm-text-muted);
+}
+
+/* ---- New Sections (Projects, Skills, Contact) ---- */
+.dark-mode .project-card, .dark-mode .skill {
+    background: linear-gradient(145deg, rgba(30, 30, 36, 0.8), rgba(22, 22, 26, 0.95));
+    backdrop-filter: blur(10px);
+    border: 2px solid var(--dm-border);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+.dark-mode .project-card:hover, .dark-mode .skill:hover {
+    border: 2px solid #0056b3;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5), 0 0 20px var(--dm-accent-glow);
+}
+.dark-mode .project-info h3, .dark-mode .skill h3, .dark-mode .skill i {
+    color: var(--dm-accent);
+}
+.dark-mode .project-info p, .dark-mode .skill p {
+    color: var(--dm-text-muted);
+}
+.dark-mode .form-group input, .dark-mode .form-group textarea {
+    background-color: var(--dm-surface-raised);
+    color: var(--dm-text);
+    border: 1px solid var(--dm-border);
+}
+.dark-mode .form-group input:focus, .dark-mode .form-group textarea:focus {
+    background-color: var(--dm-surface);
+    border-color: var(--dm-accent);
+    box-shadow: 0 0 8px var(--dm-accent-glow);
+}
+.dark-mode .contact-info p {
+    color: var(--dm-text-muted);
+}
+
+/* ===========================
+   SETTINGS PANEL
+   =========================== */
+.settings-panel {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    background-color: #222;
+    color: white;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 20px;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.5);
+    border-radius: 10px 0 0 10px;
+}
+
+.settings-panel a.closebtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 36px;
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.settings-panel a.closebtn:hover {
+    color: #ff6b6b;
+    transform: rotate(90deg);
+}
+
+.settings-panel h2 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2em;
+    color: var(--accent-color);
+}
+
+.settings-option {
+    margin: 25px 0;
+    text-align: left;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+.settings-option p {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: var(--accent-color);
+}
+
+.settings-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.btn-settings {
+    flex: 1;
+    min-width: 80px;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    background-color: #333;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-settings:hover {
+    background-color: var(--accent-color);
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* ---- Dark Mode Settings Panel ---- */
+.dark-mode .settings-panel {
+    background: linear-gradient(180deg, #0d0d10 0%, #13131a 100%);
+    border-left: 1px solid var(--dm-border);
+    box-shadow: -8px 0 40px rgba(0, 0, 0, 0.7);
+}
+
+.dark-mode .settings-panel h2 {
+    color: var(--dm-accent);
+    text-shadow: 0 0 16px var(--dm-accent-glow);
+}
+
+.dark-mode .settings-option p {
+    color: var(--dm-text-muted);
+}
+
+.dark-mode .btn-settings {
+    background: var(--dm-surface-raised);
+    border: 1px solid var(--dm-border);
+    color: var(--dm-text);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .btn-settings:hover {
+    background: var(--dm-accent);
+    color: #fff;
+    border-color: var(--dm-accent);
+    box-shadow: 0 4px 16px var(--dm-accent-glow);
+}
