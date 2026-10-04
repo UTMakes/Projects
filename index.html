@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NexusQ Studios</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=5">
+    <!-- Google Fonts & Font Awesome from Nexus Client -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
 <body id="body">
     <header>
@@ -15,6 +18,8 @@
                     <li><a href="#home" class="animate-slide-in" data-lang="home">Home</a></li>
                     <li><a href="#about" class="animate-slide-in" data-lang="about">About</a></li>
                     <li><a href="#services" class="animate-slide-in" data-lang="services">Services</a></li>
+                    <li><a href="#projects" class="animate-slide-in" data-lang="projects">Projects</a></li>
+                    <li><a href="#skills" class="animate-slide-in" data-lang="skills">Skills</a></li>
                     <li><a href="#minecraft" class="animate-slide-in" data-lang="minecraft">Minecraft</a></li>
                     <li><a href="#roblox" class="animate-slide-in" data-lang="roblox">Roblox</a></li>
                     <li><a href="#contact" class="animate-slide-in" data-lang="contact">Contact</a></li>
@@ -35,6 +40,13 @@
         <div class="container">
             <h2 data-lang="aboutUs">About Us</h2>
             <p data-lang="aboutDescription">NexusQ Studios is a team of designers and developers dedicated to bringing your ideas to life. We specialize in web development, graphic design, and app promotions.</p>
+            <div class="about-content" style="margin-top: 40px;">
+                <div class="about-text">
+                    <p data-lang="aboutMe">Hello! I'm [Your Name], a software developer with a passion for creating impactful projects. This website showcases my work, skills, and ways to get in touch.</p>
+                    <p data-lang="aboutMeMore">With experience in various programming languages and frameworks, I strive to build applications that make a difference.</p>
+                    <a href="resume.pdf" class="btn" target="_blank" data-lang="downloadResume">Download Resume</a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -53,6 +65,58 @@
                 <div class="service-item animate-slide-up">
                     <h3 data-lang="appPromotions">App Promotions</h3>
                     <p data-lang="appDescription">Strategies to boost your online presence and reach your target audience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="animate-fade-in">
+        <div class="container">
+            <h2 data-lang="projects">My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card animate-slide-up">
+                    <div class="project-info" style="text-align: center; padding: 40px 20px;">
+                        <h3>Project 1</h3>
+                        <p data-lang="project1Desc">Brief description of Project 1.</p>
+                        <a href="https://github.com/yourusername/yourproject1" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
+                    </div>
+                </div>
+                <div class="project-card animate-slide-up">
+                    <div class="project-info" style="text-align: center; padding: 40px 20px;">
+                        <h3>Project 2</h3>
+                        <p data-lang="project2Desc">Brief description of Project 2.</p>
+                        <a href="https://github.com/yourusername/yourproject2" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="animate-fade-in">
+        <div class="container">
+            <h2 data-lang="skills">My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill animate-slide-up">
+                    <i class="fas fa-code"></i>
+                    <h3 data-lang="skill1">Programming</h3>
+                    <p>JavaScript, Python, Java, C++</p>
+                </div>
+                <div class="skill animate-slide-up">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3 data-lang="skill2">Web Development</h3>
+                    <p>React, Angular, HTML, CSS</p>
+                </div>
+                <div class="skill animate-slide-up">
+                    <i class="fas fa-database"></i>
+                    <h3 data-lang="skill3">Databases</h3>
+                    <p>MySQL, MongoDB, PostgreSQL</p>
+                </div>
+                <div class="skill animate-slide-up">
+                    <i class="fas fa-cloud"></i>
+                    <h3 data-lang="skill4">Cloud Services</h3>
+                    <p>AWS, Azure, Google Cloud</p>
                 </div>
             </div>
         </div>
@@ -95,7 +159,30 @@
     <section id="contact" class="animate-fade-in">
         <div class="container">
             <h2 data-lang="contactUs">Contact Us</h2>
-            <a href="mailto:info@nexusqstudios.com" class="btn animate-bounce" data-lang="emailUs">Email Us</a>
+            <div class="contact-content">
+                <form action="https://formspree.io/f/yourformid" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="name" required placeholder="Your Name" data-lang="yourName">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="_replyto" required placeholder="Your Email" data-lang="yourEmail">
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" rows="5" required placeholder="Your Message" data-lang="yourMessage"></textarea>
+                    </div>
+                    <button type="submit" class="btn" data-lang="sendMessage">Send Message</button>
+                </form>
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i> info@nexusqstudios.com</p>
+                    <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+                    <p><i class="fas fa-map-marker-alt"></i> City, Country</p>
+                    <div class="social-links">
+                        <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://twitter.com/yourusername" target="_blank"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -112,38 +199,48 @@
         
         <div class="settings-option">
             <p data-lang="darkMode">Dark Mode:</p>
-            <a href="javascript:void(0)" onclick="toggleDarkMode()" class="btn-settings" data-lang="enable">Enable</a>
+            <div class="settings-buttons">
+                <a href="javascript:void(0)" onclick="toggleDarkMode()" class="btn-settings" data-lang="enable">Enable</a>
+            </div>
         </div>
 
         <div class="settings-option">
             <p data-lang="fontSize">Font Size:</p>
-            <a href="javascript:void(0)" onclick="setFontSize('small')" class="btn-settings" data-lang="small">Small</a>
-            <a href="javascript:void(0)" onclick="setFontSize('medium')" class="btn-settings" data-lang="medium">Medium</a>
-            <a href="javascript:void(0)" onclick="setFontSize('large')" class="btn-settings" data-lang="large">Large</a>
+            <div class="settings-buttons">
+                <a href="javascript:void(0)" onclick="setFontSize('small')" class="btn-settings" data-lang="small">Small</a>
+                <a href="javascript:void(0)" onclick="setFontSize('medium')" class="btn-settings" data-lang="medium">Medium</a>
+                <a href="javascript:void(0)" onclick="setFontSize('large')" class="btn-settings" data-lang="large">Large</a>
+            </div>
         </div>
 
         <div class="settings-option">
             <p data-lang="bgColor">Background Color:</p>
-            <a href="javascript:void(0)" onclick="changeBackgroundColor('#ffffff')" class="btn-settings bg-color-button" data-lang="white">White</a>
-            <a href="javascript:void(0)" onclick="changeBackgroundColor('#f4f4f4')" class="btn-settings bg-color-button" data-lang="lightGrey">Light Grey</a>
-            <a href="javascript:void(0)" onclick="changeBackgroundColor('#000000')" class="btn-settings bg-color-button" data-lang="black">Black</a>
+            <div class="settings-buttons">
+                <a href="javascript:void(0)" onclick="changeBackgroundColor('#ffffff')" class="btn-settings bg-color-button" data-lang="white">White</a>
+                <a href="javascript:void(0)" onclick="changeBackgroundColor('#f4f4f4')" class="btn-settings bg-color-button" data-lang="lightGrey">Light Grey</a>
+                <a href="javascript:void(0)" onclick="changeBackgroundColor('#000000')" class="btn-settings bg-color-button" data-lang="black">Black</a>
+            </div>
             <!-- Message to display when dark mode is active -->
             <p id="darkModeMessage" class="small-text"></p>
         </div>
 
         <div class="settings-option">
             <p data-lang="textAlign">Text Alignment:</p>
-            <a href="javascript:void(0)" onclick="changeTextAlignment('left')" class="btn-settings" data-lang="left">Left</a>
-            <a href="javascript:void(0)" onclick="changeTextAlignment('center')" class="btn-settings" data-lang="center">Center</a>
-            <a href="javascript:void(0)" onclick="changeTextAlignment('right')" class="btn-settings" data-lang="right">Right</a>
+            <div class="settings-buttons">
+                <a href="javascript:void(0)" onclick="changeTextAlignment('left')" class="btn-settings" data-lang="left">Left</a>
+                <a href="javascript:void(0)" onclick="changeTextAlignment('center')" class="btn-settings" data-lang="center">Center</a>
+                <a href="javascript:void(0)" onclick="changeTextAlignment('right')" class="btn-settings" data-lang="right">Right</a>
+            </div>
         </div>
 
         <!-- Language Picker -->
         <div class="settings-option">
             <p data-lang="language">Language:</p>
-            <a href="javascript:void(0)" onclick="changeLanguage('en')" class="btn-settings" data-lang="english">English</a>
-            <a href="javascript:void(0)" onclick="changeLanguage('es')" class="btn-settings" data-lang="spanish">Spanish</a>
-            <a href="javascript:void(0)" onclick="changeLanguage('chi')" class="btn-settings" data-lang="spanish">Chinese</a>
+            <div class="settings-buttons">
+                <a href="javascript:void(0)" onclick="changeLanguage('en')" class="btn-settings" data-lang="english">English</a>
+                <a href="javascript:void(0)" onclick="changeLanguage('es')" class="btn-settings" data-lang="spanish">Spanish</a>
+                <a href="javascript:void(0)" onclick="changeLanguage('chi')" class="btn-settings" data-lang="chinese">Chinese</a>
+            </div>
         </div>
     </div>
 
@@ -214,7 +311,11 @@
             const elements = document.querySelectorAll('[data-lang]');
             elements.forEach(el => {
                 const key = el.getAttribute('data-lang');
-                el.textContent = translations[language][key];
+                if (el.tagName.toLowerCase() === 'input' || el.tagName.toLowerCase() === 'textarea') {
+                    el.placeholder = translations[language][key];
+                } else {
+                    el.textContent = translations[language][key];
+                }
             });
             localStorage.setItem('language', language);
         }
@@ -245,6 +346,21 @@
         download: "Download",
         contactUs: "Contact Us",
         emailUs: "Email Us",
+        projects: "Projects",
+        skills: "Skills",
+        aboutMe: "Hello! I'm [Your Name], a software developer with a passion for creating impactful projects. This website showcases my work, skills, and ways to get in touch.",
+        aboutMeMore: "With experience in various programming languages and frameworks, I strive to build applications that make a difference.",
+        downloadResume: "Download Resume",
+        project1Desc: "Brief description of Project 1.",
+        project2Desc: "Brief description of Project 2.",
+        skill1: "Programming",
+        skill2: "Web Development",
+        skill3: "Databases",
+        skill4: "Cloud Services",
+        yourName: "Your Name",
+        yourEmail: "Your Email",
+        yourMessage: "Your Message",
+        sendMessage: "Send Message",
         footerText: "&copy; 2024 NexusQ Studios. All rights reserved.",
         darkMode: "Dark Mode:",
         fontSize: "Font Size:",
@@ -262,6 +378,7 @@
         language: "Language:",
         english: "English",
         spanish: "Spanish",
+        chinese: "Chinese",
         confirmDownloadText: "Are you sure you want to download the Nexus Client 1.21?",
         confirmButtonText: "Confirm",
         cancelButtonText: "Cancel"
@@ -291,6 +408,21 @@
         download: "Descargar",
         contactUs: "Contáctanos",
         emailUs: "Envíanos un Correo",
+        projects: "Proyectos",
+        skills: "Habilidades",
+        aboutMe: "¡Hola! Soy [Tu Nombre], un desarrollador de software con pasión por crear proyectos impactantes. Este sitio muestra mi trabajo, habilidades y formas de contacto.",
+        aboutMeMore: "Con experiencia en varios lenguajes de programación y frameworks, me esfuerzo por construir aplicaciones que marquen la diferencia.",
+        downloadResume: "Descargar Currículum",
+        project1Desc: "Breve descripción del Proyecto 1.",
+        project2Desc: "Breve descripción del Proyecto 2.",
+        skill1: "Programación",
+        skill2: "Desarrollo Web",
+        skill3: "Bases de Datos",
+        skill4: "Servicios en la Nube",
+        yourName: "Tu Nombre",
+        yourEmail: "Tu Correo",
+        yourMessage: "Tu Mensaje",
+        sendMessage: "Enviar Mensaje",
         footerText: "&copy; 2024 NexusQ Studios. Todos los derechos reservados.",
         darkMode: "Modo Oscuro:",
         fontSize: "Tamaño de Fuente:",
@@ -310,7 +442,8 @@
         spanish: "Español",
         confirmDownloadText: "¿Estás seguro de que deseas descargar Nexus Client 1.21?",
         confirmButtonText: "Confirmar",
-        cancelButtonText: "Cancelar"
+        cancelButtonText: "Cancelar",
+        chinese: "Chino"
     },        
     chi: {
         nexusq: "NexusQ Studios",
@@ -337,6 +470,21 @@
         download: "释放",
         contactUs: "联系我们",
         emailUs: "给我们发电子邮件",
+        projects: "项目",
+        skills: "技能",
+        aboutMe: "你好！我是[你的名字]，一充满热情的软件开发者。本网站展示了我的工作、技能和联系方式。",
+        aboutMeMore: "凭借在多种编程语言和框架中的经验，我努力构建能够产生影响的应用程序。",
+        downloadResume: "下载简历",
+        project1Desc: "项目1的简要说明。",
+        project2Desc: "项目2的简要说明。",
+        skill1: "编程",
+        skill2: "网页开发",
+        skill3: "数据库",
+        skill4: "云服务",
+        yourName: "你的名字",
+        yourEmail: "你的电子邮件",
+        yourMessage: "你的信息",
+        sendMessage: "发送信息",
         footerText: "＆复制; 2024 年 NexusQ 工作室。版权所有.",
         darkMode: "深色模式",
         fontSize: "字体大小：",
@@ -356,7 +504,8 @@
         spanish: "西班牙语",
         confirmDownloadText: "您确定要下载 Nexus 客户端 1.21 吗?",
         confirmButtonText: "确认",
-        cancelButtonText: "取消"
+        cancelButtonText: "取消",
+        chinese: "中文"
     }
 };
         function loadSettings() {
